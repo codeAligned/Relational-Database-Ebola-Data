@@ -1,14 +1,14 @@
 The data set is constituted by 209 polychlorobiphenyls (PCB).
 The following properties are given:
 
-1) melting point (MP)
-2) relative retention time (RTT)
-3) octanol-water partition coefficient (logP)
-4) total surface area (TSA)
-5) log Henry constant (logH)
-6) log water solubility (logSw)
-7) log water activity coefficient (logYw)
-8) relative enthalpy of formation (dHf)
+1) melting point (MP)   
+2) relative retention time (RTT)  
+3) octanol-water partition coefficient (logP)  
+4) total surface area (TSA)  
+5) log Henry constant (logH)  
+6) log water solubility (logSw)  
+7) log water activity coefficient (logYw)  
+8) relative enthalpy of formation (dHf)  
 
 Unknown values are identified by -999.
 
