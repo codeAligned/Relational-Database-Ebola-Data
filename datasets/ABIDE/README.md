@@ -1,7 +1,7 @@
 # Autism Brain Imaging Data Exchange
 
 ### Source:
-    - ABIDE@LONI: https://ida.loni.usc.edu/home/projectPage.jsp?project=ABIDE&loginKey=-1505561175226664779&userEmail=justin_chao%40utexas.edu&page=HOME&subPage=OVERVIEW_PR
+    - ABIDE@LONI: https://ida.loni.usc.edu/login.jsp
     - ABIDE: http://fcon_1000.projects.nitrc.org/indi/abide/index.html
 
 
