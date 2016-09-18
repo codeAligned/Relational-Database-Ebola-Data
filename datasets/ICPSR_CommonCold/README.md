@@ -1,6 +1,6 @@
-# File Manifest for ICPSR 36365
+File Manifest for ICPSR 36365
 
-### source: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/36365
+## source: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/36365
 
 Cohen, Sheldon. The Common Cold Project: 5 Studies of Behavior, Biology,
 and the Common Cold. ICPSR36365-v1. Ann Arbor, MI: Inter-university
