@@ -1,4 +1,4 @@
-# Ebola Treatment Centers or Units (ETCs or ETUs)
+#Ebola Treatment Centers or Units (ETCs or ETUs)
 
 ### source: https://data.humdata.org/dataset/ebola-treatment-centers
 
@@ -10,11 +10,11 @@ frequently.
 
 METADATA
 
-Source: UNMEER
-Contributor: UNMEER
-Date of Dataset: Dec 30, 2014
-Location: Guinea,  Liberia,  Sierra Leone 
-Visibility: Public
-License: Creative Commons Attribution for Intergovernmental Organisations
-Methodology: Direct Observational Data/Anecdotal Data
-Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.
+Source: UNMEER  
+Contributor: UNMEER  
+Date of Dataset: Dec 30, 2014  
+Location: Guinea,  Liberia,  Sierra Leone   
+Visibility: Public  
+License: Creative Commons Attribution for Intergovernmental Organisations    
+Methodology: Direct Observational Data/Anecdotal Data    
+Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.    

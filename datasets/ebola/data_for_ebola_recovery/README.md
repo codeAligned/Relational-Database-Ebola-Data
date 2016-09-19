@@ -23,3 +23,14 @@ The survey covered outreach efforts, attitudes toward survivors, knowledge of
 Ebola symptoms and transmission paths, uptake of Ebola prevention practices,
 Ebola incidence histories, health outcomes, food security, economic outcomes,
 and social outcomes. The survey lasted about 45 minutes on average.
+
+METADATA
+
+Source: MIT Governance Lab  
+Contributor: MIT Governance Lab  
+Date of Dataset: Dec 04, 2014 - Jan 07, 2015  
+Location: Liberia   
+Visibility: Public  
+License: Creative Commons Attribution for Intergovernmental Organisations    
+Methodology: Sample Survey  
+Caveats / Comments: n/a  

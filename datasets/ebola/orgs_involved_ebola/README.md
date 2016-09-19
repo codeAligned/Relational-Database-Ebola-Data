@@ -13,3 +13,15 @@ Note: If your humanitarian organization would like to make a correction or
 update the dataset, please contact the OCHA focal point for the respective
 country. Contacts can be found at
 https://wca.humanitarianresponse.info/fr/emergencies/virus-ebola
+
+
+METADATA
+
+Source: UNOCHA ROWCA  
+Contributor: OCHA ROWCA  
+Date of Dataset: Dec 05, 2014  
+Location: Guinea,  Liberia,  Nigeria,  Sierra Leone   
+Visibility: Public  
+License: Public Domain / No Restrictions  
+Methodology: Census  
+Caveats / Comments: n/a   
