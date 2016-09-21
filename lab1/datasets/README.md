@@ -61,7 +61,7 @@ Caveats / Comments: n/a
 
 ## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis
 
-#### source:
+### source:
 https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
 
 Who, What, Where (3W) dataset on the Ebola response effort. Some entries have a
@@ -76,7 +76,7 @@ country. Contacts can be found at
 https://wca.humanitarianresponse.info/fr/emergencies/virus-ebola
 
 
-METADATA
+#### METADATA
 
 Source: UNOCHA ROWCA
 Contributor: OCHA ROWCA
