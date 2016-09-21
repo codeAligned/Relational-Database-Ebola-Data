@@ -15,7 +15,9 @@ you foresee when you start working with the data. Name the file
 data_sources.txt.
 
 # LISTING OF DATASETS
-This listing is copied in data_sources.txt.
+* This listing is copied in data_sources.txt.
+* Datasets have been cleaned for better integration into a database. 
+Original datasets from sources can be found in the original_datasets directory.
 
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 
