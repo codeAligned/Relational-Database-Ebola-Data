@@ -1,8 +1,9 @@
-# CS 327E Lab 1: Relational Database Design Learning Objectives:
+## CS 327E Lab 1: Relational Database Design Learning Objectives:
 1. Work with real-life data
 2. Work in small teams
 3. Create data models that describe your data
-4. Design and create a relational schema in MySQL 5. Get some exposure to LucidChart and Github
+4. Design and create a relational schema in MySQL 
+5. Get some exposure to LucidChart and Github
 
 ## Prerequisites:
 1. Lab partner
