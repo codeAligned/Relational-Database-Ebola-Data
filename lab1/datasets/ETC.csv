@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 COUNTRY,ECF_Code,ECF_Name,Status,Beds_Open,Open_Date,Partner,Latitude,Longitude,LabPresent
 Guinea,GIN_0011,Macenta,Open,70,2014-12-05T00:00:00,FRENCH RED CROSS,8.541,-9.471,Yes
 Guinea,GIN_0010,Gueckedou,Open,100,2014-12-05T00:00:00,MSF,8.562,-10.133,Yes
@@ -60,3 +61,71 @@ Sierra Leone,SLE_0109,34 Military Hospital,Open,10,2014-12-01T00:00:00,British M
 Sierra Leone,SLE_0110,Magbankor MSF ETU,Open,50,2014-12-15T00:00:00,MSF/OCNML,8.73617,-11.92354,Yes
 Sierra Leone,SLE_0146,MSF POW School (ETU),Closed,15,,MSF/EU,0,0,Yes
 Sierra Leone,SLE_0147,ADRA,Open,10,2014-12-14T00:00:00,Cuban Medical Brigade,8.334213,-13.07302,No
+=======
+FID,ECF_Code,ECF_Name,Status,Type,Beds_Open,Partner,Latitude,Longitude,LabPresent,COUNTRY
+gin_heal_pt_unmeer_ebolacarefacilities.1,GIN_0011,Macenta,Open,ETU,70,FRENCH RED CROSS,8.541,-9.471,Yes,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.2,GIN_0010,Gueckedou,Open,ETU,100,MSF,8.562,-10.133,Yes,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.3,GIN_0001,Conakry Donka Hospital,Open,ETU,70,MSF,9.535,-13.683,Yes,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.4,GIN_0003,Coyah,Under Construction,ETU,0,Cuba?,9.73,-13.421,No,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.5,GIN_0009,Beyla,Under Construction,ETU,0,WAHA,8.69,-8.648,No,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.6,GIN_0007,Nzerekore,Open,ETU,0,ALIMA,7.756,-8.82,No,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.7,GIN_0054,Kerouane,Under Construction,ETU,0,French Red Cross,9.2741,-9.00326,No,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.8,GIN_0058,Wonkifong,Under Construction,ETU,0,,9.730112,-13.42081,No,Guinea
+gin_heal_pt_unmeer_ebolacarefacilities.9,GIN_0059,Kankan,Under Construction,ETU,0,MSF,10.383,-9.305,No,Guinea
+,,,,,,,,,,
+FID,ECF_Code,ECF_Name,Status,Type,Beds_Open,Partner,Latitude,Longitude,,
+lbr_heal_pt_unmeer_ebolacarefacilities.1,LBR_0001,Barclayville,Under Construction,ETU,0,PAE/Aspen,4.67654149,-8.23489495,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.2,LBR_0002,Bopulu,Under Construction,ETU,0,PAE/Aspen,7.06390178,-10.4906908,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.3,LBR_0003,Buchanan,Open,ETU,0,IOM,5.88810337,-10.03322255,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.4,LBR_0026,Tappita,Under Construction,ETU,0,Heart to Heart/PAE,6.4899591,-8.85999291,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.5,LBR_0010,Greenville,Under Construction,ETU,0,PAE/MSB,5.498,-8.66,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.6,LBR_0011,Harper,Under Construction,ETU,0,Partners in Health/PAE,4.39341051,-7.69252002,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.7,LBR_0006,Fish Town,Under Construction,ETU,0,ARC,5.19639,-7.876,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.8,LBR_0025,Sinje,Open,ETU,50,IOM,6.81605455,-11.13382627,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.9,LBR_0030,Zwedru,Open,ETU,0,Partners in Health/PAE,6.06495705,-8.1380602,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.10,LBR_0028,Voinjama,Under Construction,ETU,0,WAHA/GOAL/PAE/Aspen,8.41658363,-9.74996812,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.11,LBR_0012,JFK hospital,Closed,ETU,0,MoH/WHO,6.28723,-10.77325,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.12,LBR_0021,SKD 1,Under Construction,ETU,0,IRC,6.25675606,-10.70045594,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.13,LBR_0022,SKD 2,Open,ETU,50,German RC/German Armed Forces,6.25744595,-10.7005257,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.14,LBR_0017,Congo Town 2 (old MoD 2),Closed,ETU,0,MBS Sweden,6.268152,-10.731191,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.15,LBR_0014,Kakata II,Closed,ETU,0,,6.53993904,-10.34222136,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.16,LBR_0024,Robertsport,Closed,ETU,0,,6.75201231,-11.36470465,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.17,LBR_0048,Ganta,Under Construction,ETU,0,Nimba CHT / PCI,7.2375,-8.9814,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.18,LBR_0019,ELWA 3,Open,ETU,60,MSF Brussels,6.24443999,-10.70028,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.19,LBR_0018,ELWA 2,Open,ETU,100,MoH/WHO,6.23965,-10.696,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.20,LBR_0110,SKD 3 - Chinese,Open,ETU,100,Chinese FMT,6.25800905,-10.70336322,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.21,LBR_0005,Firestone,Open,ETU,31,Firestone,6.35305998,-10.46971999,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.22,LBR_0027,Tubmanburg,Open,ETU,100,IOM,6.86875073,-10.82040988,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.23,LBR_0023,Unity Conference Centre,Open,ETU,50,MoH,6.38903522,-10.79283257,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.24,LBR_0009,Suakoko / Gbarnga,Open,ETU,71,IMC,7.004669,-9.555144,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.25,LBR_0020,Island Clinic,Open,ETU,150,MoH/WHO/AU,6.3843716,-10.7871135,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.26,LBR_0015,Monrovia Medical Unit,Open,ETU,22,USPHS,6.313333,-10.801389,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.27,LBR_0007,Foya,Closed,ETU,0,MSF,8.3789113,-10.20575665,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.28,LBR_0016,Congo Town 1 (old MoD),Open,ETU,40,AU/Cuban FMT/MoH,6.27028,-10.73417,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.29,LBR_0013,Kakata 1,Open,ETU,50,IMC,6.52752356,-10.36038423,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.30,LBR_0008,Ganta United Methodist Hospital,Open,ETU,36,Methodist Church / PCI,7.23732659,-8.98132287,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.31,LBR_0116,Gbediah Town,Under Construction,ETU,0,PAE/Aspen,5.483,-9.588,No,Liberia
+lbr_heal_pt_unmeer_ebolacarefacilities.32,LBR_0119,Zorzor,Planned,ETU,0,PAE / Aspend,7.776,-9.423,No,Liberia
+,,,,,,,,,,
+FID,ECF_Code,ECF_Name,Status,Type,Beds_Open,Partner,Latitude,Longitude,,
+sle_heal_pt_unmeer_ebolacarefacilities.1,SLE_0001,Goderich,Open,ETU,32,EMERGENCY,8.424321,-13.280407,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.2,SLE_0002,Hastings,Open,ETU,10,RSLAF/KINGS/EU,8.382142,-13.140652,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.3,SLE_0004,Police Training Sch-Hastings 1,Open,ETU,20,MOH / RSLAF,8.382705,-13.125851,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.4,SLE_0005,Kerry Town STC,Open,ETU,7,Save the Children/PHE,8.257095,-13.086371,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.5,SLE_0006,Port Loko ETU,Open,ETU,20,GOAL/PHE,8.77665,-12.76239,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.6,SLE_0007,Lunsar ETU,Open,ETU,20,IMC,8.69854,-12.57656,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.7,SLE_0008,Moyamba ETU,Open,ETU,30,MDM/DTRA,8.1778929,-12.41256334,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.8,SLE_0010,"China-SL Friendship Hospital ETU, Jui",Open,ETU,5,Chinese CDC,8.38686091,-13.14954849,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.9,SLE_0012,Kailahun MSF,Closed,ETU,0,MSF/PHA-Canada,0,0,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.10,SLE_0013,Rural Kenema Field Hospital (IFRC),Open,ETU,12,IFRC,8.005088,-11.1156,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.11,SLE_0014,Dorma ETU - Koidu Town,Open,ETU,25,Well Body/ PIH,8.630038,-10.958743,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.12,SLE_0015,Bo Town MSF,Open,ETU,104,CDC,7.94104,-11.6697,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.13,SLE_0009,Makeni TU,Open,ETU,100,IMC/PHE,8.7985682,-12.03104834,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.14,SLE_0022,Police Training Sch-Hastings 2,Open,ETU,50,MOH/RSLAF,8.3827045,-13.12585093,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.15,SLE_0023,Maforki ETU,Open,ETU,44,MoH / Plan,8.74984,-12.7724,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.16,SLE_0020,Magbenteh Hospital,Closed,ETU,0,MoH/Addax/AU/WHO,0,0,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.17,SLE_0109,34 Military Hospital,Open,ETU,10,British Medical Team,8.464217,-13.261242,No,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.18,SLE_0110,Magbankor MSF ETU,Open,ETU,50,MSF/OCNML,8.73617,-11.92354,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.19,SLE_0146,MSF POW School (ETU),Closed,ETU,15,MSF/EU,0,0,Yes,Sierra Leone
+sle_heal_pt_unmeer_ebolacarefacilities.20,SLE_0147,ADRA,Open,ETU,10,Cuban Medical Brigade,8.334213,-13.07302,No,Sierra Leone
+>>>>>>> 45fbb210923b438d24cbc892f999117a753e8754
