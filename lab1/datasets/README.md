@@ -1,5 +1,21 @@
+# Assignment
+Choose 1-3 interesting and related datasets. The datasets must be both
+structured and in one of the following formats: csv, json, xml. Chapter 6 from
+our Data Wrangling text discusses various datasets that are available from
+https://github.com/jackiekazil/data-wrangling. You are not obligated to use the
+datasets mentioned in the book, but you must use a dataset that is not
+proprietary. Once you have chosen your datasets, create a text file and list
+each dataset with a brief description for each one. The description should
+include the name of the organization that published the dataset, the file
+format of the dataset, as well as some of the attributes that you found of
+interest and plan to model in the database. Be sure to include the link to the
+web site from where you obtained the dataset. Also, if you have noticed any
+anomalies in the raw data, be sure to mention those as well as any challenges
+you foresee when you start working with the data. Name the file
+data_sources.txt.
+
 # LISTING OF DATASETS
-This file is also copied in data_sources.txt.
+This listing is copied in data_sources.txt.
 
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 
