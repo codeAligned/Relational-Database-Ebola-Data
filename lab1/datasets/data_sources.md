@@ -2,7 +2,7 @@
 
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 
-#### source: https://data.humdata.org/dataset/ebola-treatment-centers
+### source: https://data.humdata.org/dataset/ebola-treatment-centers
 
 This dataset represents the best-known collection of status and location of the
 facilities known as Ebola Treatment Centers or Ebola Treatment Units in Guinea,
@@ -10,7 +10,7 @@ Liberia and Sierra Leone, with relevant attributes and information. Please
 forward any mistakes or requested changes to unmeer.im@gmail.com. Updated
 frequently.
 
-METADATA
+#### METADATA
 
 Source: UNMEER
 Contributor: UNMEER
@@ -24,7 +24,7 @@ Caveats / Comments: Data may have inaccuracies and will be updated as soon as po
 
 ## Data for Ebola Recovery
 
-#### source: https://data.humdata.org/dataset/data-for-ebola-recovery
+### source: https://data.humdata.org/dataset/data-for-ebola-recovery
 
 Data on health, economic livelihoods, food security, and ebola vigilance from
 representative survey of Monrovia conducted in December 2014, March 2015, and
@@ -48,15 +48,15 @@ Ebola symptoms and transmission paths, uptake of Ebola prevention practices,
 Ebola incidence histories, health outcomes, food security, economic outcomes,
 and social outcomes. The survey lasted about 45 minutes on average.
 
-METADATA
+#### METADATA
 
 Source: MIT Governance Lab  
 Contributor: MIT Governance Lab  
-Date of Dataset: Dec 04, 2014 - Jan 07, 2015  
+Date of Dataset: Dec 04, 2014 - Jan 07, 2015   
 Location: Liberia   
 Visibility: Public  
 License: Creative Commons Attribution for Intergovernmental Organisations    
-Methodology: Sample Survey  
+Methodology: Sample Survey   
 Caveats / Comments: n/a   
 
 ## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis

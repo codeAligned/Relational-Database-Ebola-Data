@@ -1,4 +1,4 @@
-#Ebola Treatment Centers or Units (ETCs or ETUs)
+# Ebola Treatment Centers or Units (ETCs or ETUs)
 
 ### source: https://data.humdata.org/dataset/ebola-treatment-centers
 
@@ -8,7 +8,7 @@ Liberia and Sierra Leone, with relevant attributes and information. Please
 forward any mistakes or requested changes to unmeer.im@gmail.com. Updated
 frequently.
 
-METADATA
+## METADATA
 
 Source: UNMEER  
 Contributor: UNMEER  

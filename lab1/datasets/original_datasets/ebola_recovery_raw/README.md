@@ -24,7 +24,7 @@ Ebola symptoms and transmission paths, uptake of Ebola prevention practices,
 Ebola incidence histories, health outcomes, food security, economic outcomes,
 and social outcomes. The survey lasted about 45 minutes on average.
 
-METADATA
+## METADATA
 
 Source: MIT Governance Lab  
 Contributor: MIT Governance Lab  
