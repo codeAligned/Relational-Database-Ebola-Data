@@ -1,4 +1,5 @@
 # LISTING OF DATASETS
+This file is also copied in data_sources.txt.
 
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 
