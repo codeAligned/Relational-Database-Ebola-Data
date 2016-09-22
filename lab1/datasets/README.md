@@ -1,26 +1,10 @@
-# Assignment
-Choose 1-3 interesting and related datasets. The datasets must be both
-structured and in one of the following formats: csv, json, xml. Chapter 6 from
-our Data Wrangling text discusses various datasets that are available from
-https://github.com/jackiekazil/data-wrangling. You are not obligated to use the
-datasets mentioned in the book, but you must use a dataset that is not
-proprietary. Once you have chosen your datasets, create a text file and list
-each dataset with a brief description for each one. The description should
-include the name of the organization that published the dataset, the file
-format of the dataset, as well as some of the attributes that you found of
-interest and plan to model in the database. Be sure to include the link to the
-web site from where you obtained the dataset. Also, if you have noticed any
-anomalies in the raw data, be sure to mention those as well as any challenges
-you foresee when you start working with the data. Name the file
-data_sources.txt.
-
 # LISTING OF DATASETS
 * This listing is copied in data_sources.txt.
 * Countries of interest: Guinea, Liberia, Sierra Leone.
 * Datasets have been cleaned for better integration into a database. 
 Original datasets from sources can be found in the original_datasets directory.
 
-
+---
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 ### source: https://data.humdata.org/dataset/ebola-treatment-centers
 ### files: ETC.csv
@@ -38,9 +22,11 @@ Location: Guinea,  Liberia,  Sierra Leone
 Visibility: Public  
 License: Creative Commons Attribution for Intergovernmental Organisations  
 Methodology: Direct Observational Data/Anecdotal Data    
-Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.
+Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.  
 
+* ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude  
 
+---
 ## Data for Ebola Recovery
 ### source: https://data.humdata.org/dataset/data-for-ebola-recovery
 ### files: data_survey.csv , survey_ref.xlsx
@@ -76,7 +62,10 @@ License: Creative Commons Attribution for Intergovernmental Organisations
 Methodology: Sample Survey   
 Caveats / Comments: Data is only available for Liberia.
 
+* ATTRIBUTES OF INTEREST: Country, Respid, Gender, Age, Educ, Corganizedae   
 
+
+---
 ## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis
 ### source: https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
 ### files: orgs_involved.csv
@@ -101,10 +90,22 @@ License: Public Domain / No Restrictions
 Methodology: Census  
 Caveats / Comments: Data includes Nigeria, which will be omitted.
 
+* ATTRIBUTES OF INTEREST: Country, Acronym, Organization, Type   
 
+
+---
 ## Data on Country Statistics
 ### source: https://www.cia.gov/library/publications/the-world-factbook/
 ### files: CIA_World_Factbook.csv
 Dataset on statistics for Liberia, Sierra Leone, and Guinea.
-Includes percentage of urban population, health expenditures, GDP per capita in
-US dollars.
+Includes: what percentage of the country’s population is urban, health expenditures as a percentage of GDP, and GDP per capita in US dollars.
+
+Note: We pulled the data from the website for our 3 countries of interest, as there wasn’t a file to download.
+
+* ATTRIBUTES OF INTEREST: Country, Urban_pop, Health_exp, GDP_cap   
+
+
+---
+## ANOMALIES  
+Note: Our survey dataset only includes respondents from Liberia.
+      Data from the CIA World Facebook is scraped from the site.
