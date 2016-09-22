@@ -1,4 +1,4 @@
-COUNTRY,MEDIANAGE,BIRTHRATE (per 1000 pop),DEATHRATE (per 1000 pop),urban_pop,LIFEEXPECATBIRTH,health_exp,LITERACY,gdp_cap
-Liberia,18.3,34.41,9.69,49.70%,58.6,10%,47.60%,$900.00 
-Sierra Leone,19,37.03,10.81,39.90%,57.79,11.10%,48.10%,"$1,600.00 "
-Guinea,18.8,35.74,9.46,37.20%,60.08,5.60%,30.40%,"$1,200.00 "
+COUNTRY,urban_pop,health_exp,gdp_cap
+Liberia,49.70%,10%,$900.00 
+Sierra Leone,39.90%,11.10%,"$1,600.00 "
+Guinea,37.20%,5.60%,"$1,200.00 "
