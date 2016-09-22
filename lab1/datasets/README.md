@@ -92,12 +92,19 @@ country. Contacts can be found at
 https://wca.humanitarianresponse.info/fr/emergencies/virus-ebola
 
 #### METADATA
-Source: UNOCHA ROWCA (United Nations Office for the Coordination of Humanitarian
-Affairs Regional Office for West and Central Africa)    
+Source: UNOCHA ROWCA    
 Contributor: OCHA ROWCA  
 Date of Dataset: Dec 05, 2014  
 Location: Guinea,  Liberia,  Nigeria,  Sierra Leone  
 Visibility: Public  
-License: Public Domain / No Restrictions  
+License: Public Domain / No Restrictions 
 Methodology: Census  
 Caveats / Comments: Data includes Nigeria, which will be omitted.
+
+
+## Data on Country Statistics
+### source: https://www.cia.gov/library/publications/the-world-factbook/
+### files: CIA_World_Factbook.csv
+Dataset on statistics for Liberia, Sierra Leone, and Guinea.
+Includes percentage of urban population, health expenditures, GDP per capita in
+US dollars.
