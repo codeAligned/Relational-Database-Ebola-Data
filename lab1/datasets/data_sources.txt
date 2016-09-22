@@ -20,6 +20,11 @@ Methodology: Direct Observational Data/Anecdotal Data
 Caveats / Comments: Data may have inaccuracies and will be updated as soon as
 possible with newly-provided information.
 
+### ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude
+
+
+
+
 
 ## Data for Ebola Recovery
 ### source: https://data.humdata.org/dataset/data-for-ebola-recovery
@@ -56,6 +61,12 @@ License: Creative Commons Attribution for Intergovernmental Organisations
 Methodology: Sample Survey   
 Caveats / Comments: n/a   
 
+### ATTRIBUTES OF INTEREST: Country, Respid, Gender, Age, Educ, Corganizedae
+
+
+
+
+
 ## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis
 ### source:
 https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
@@ -81,9 +92,26 @@ License: Public Domain / No Restrictions
 Methodology: Census  
 Caveats / Comments: Data includes Nigeria, which will be omitted.
 
+### ATTRIBUTES OF INTEREST: Country, Acronym, Organization, Type 
+
+
+
+
+
 ## Data on Country Statistics
 ### source: https://www.cia.gov/library/publications/the-world-factbook/
 ### files: CIA_World_Factbook.csv
 Dataset on statistics for Liberia, Sierra Leone, and Guinea.
-Includes percentage of urban population, health expenditures, GDP per capita in
-US dollars.
+Includes: what percentage of the country’s population is urban, health expenditures as a percentage of GDP, and GDP per capita in US dollars.
+
+Note: We pulled the data from the website for our 3 countries of interest, as there wasn’t a file to download.
+
+### ATTRIBUTES OF INTEREST: Country, Urban_pop, Health_exp, GDP_cap
+
+
+
+
+
+#### ANOMALIES
+Note: Our survey dataset only includes respondents from Liberia.
+      Data from the CIA World Facebook is scraped from the site.
