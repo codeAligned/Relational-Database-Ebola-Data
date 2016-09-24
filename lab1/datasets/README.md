@@ -109,3 +109,9 @@ Note: We pulled the data from the website for our 3 countries of interest, as th
 ## ANOMALIES  
 Note: Our survey dataset only includes respondents from Liberia.
       Data from the CIA World Facebook is scraped from the site.
+
+___
+## Comprehensive Dataset  
+### files: comprehensve_dataset.xlsx
+This excel file is a comprehensive spreadsheet containing all used datasets in
+their own respective sheet.
