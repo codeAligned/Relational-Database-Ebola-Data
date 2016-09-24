@@ -1,11 +1,3 @@
-# To Do List
-1. Ensure logical_model is in 1NF.
-2. Check Constraints in Create Table statements.
-3. Review Reverse Engineered EER Model in Workbench. 
-    * may/may not relationships not represented in create table statements.
-4. Check FK relationships match b/w create_tables.sql and schemas.
-
----
 ## CS 327E Lab 1: Relational Database Design Learning Objectives:
 1. Work with real-life data
 2. Work in small teams
