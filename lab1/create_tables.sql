@@ -73,13 +73,13 @@ CREATE TABLE ETC_Org (
     FOREIGN KEY (acronym) REFERENCES Organization (acronym)
 );
 
-SELECT 'LOADING Country' as 'INFO';
-source load_departments.dump ;
-SELECT 'LOADING ETC' as 'INFO';
-source load_employees.dump ;
-SELECT 'LOADINGSurvey_Respondent' as 'INFO';
-source load_dept_emp.dump ;
-SELECT 'LOADING Organization' as 'INFO';
-source load_dept_manager.dump ;
-SELECT 'LOADINGETC_Org' as 'INFO';
-source load_titles.dump ;
+-- SELECT 'LOADING Country' as 'INFO';
+-- source load_Country.dump ;
+-- SELECT 'LOADING ETC' as 'INFO';
+-- source load_ETC.dump ;
+-- SELECT 'LOADING Survey_Respondent' as 'INFO';
+-- source load_Survey_Respondent.dump ;
+-- SELECT 'LOADING Organization' as 'INFO';
+-- source load_Organization.dump ;
+-- SELECT 'LOADING ETC_Org' as 'INFO';
+-- source load_ETC_Org.dump ;
