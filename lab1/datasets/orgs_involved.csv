@@ -48,7 +48,7 @@ Liberia,Irish Aid,Ireland Government,Donors
 Liberia,HHI,Heart to Heart International,International NGO
 Liberia,LIPO,Liberia Protection Organization ,National Organization
 Liberia,ACDI/VOCA,ACDI/VOCA,International Organization
-Liberia,ACF,Action¾Against Hunger,International Organization
+Liberia,ACF,Action_Against Hunger,International Organization
 Liberia,ActionAid Liberia,ActionAid Liberia,International NGO
 Liberia,ADC ,African Development Corps,International Organization
 Liberia,AEL ,Association of Evangelicals of Liberia,National Organization
@@ -92,7 +92,7 @@ Liberia,IFRC,International Federation Of Red Cross and Red Crescent Societies,Re
 Liberia,IMC,International Medical Corps,International NGO
 Liberia,IRC,International Rescue Committee,International NGO
 Liberia,IREX,IREX,International Organization
-Liberia,Jo-River¾Peace Building Committee ,Jo-River Peace Building Committee ,National NGO
+Liberia,Jo-River_Peace Building Committee ,Jo-River Peace Building Committee ,National NGO
 Liberia,JPC,Justice and Peace Commission,National NGO
 Liberia,KKG ,Kpain-Kpain-Gbo ,Private
 Liberia,Kriterion,Kriterion,International NGO
@@ -139,9 +139,9 @@ Nigeria,MoH,Ministry of Health,Goverment
 Nigeria,WHO,World Health Organization,UN Agency
 Nigeria,CDC,US Center for Disease Control,Goverment
 Nigeria,MSF,Medecins sans Frontieres,International NGO
-Nigeria,NFELTP,Nigeria¾Field Epidemiology and Laboratory Training Program,National Organization
+Nigeria,NFELTP,Nigeria_Field Epidemiology and Laboratory Training Program,National Organization
 Nigeria,UNICEF,United Nations Children's Fund,UN Agency
-Senegal,ACF,Action¾Against Hunger,International Organization
+Senegal,ACF,Action_Against Hunger,International Organization
 Senegal,ICRC,International Committee of the Red Cross,International NGO
 Senegal,Oxfam,Oxfam,International Organization
 Sierra Leone,CCSL,Council of Churches in Sierra Leone,National NGO
