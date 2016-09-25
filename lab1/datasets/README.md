@@ -112,6 +112,6 @@ Note: Our survey dataset only includes respondents from Liberia.
 
 ___
 ## Comprehensive Dataset  
-### files: comprehensve_dataset.xlsx
+### files: comprehensive_dataset.xlsx
 This excel file is a comprehensive spreadsheet containing all used datasets in
 their own respective sheet.
