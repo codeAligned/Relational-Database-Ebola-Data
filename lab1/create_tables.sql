@@ -1,4 +1,5 @@
 -- Ebola database
+-- SQL script
 
 DROP DATABASE IF EXISTS Ebola;
 CREATE DATABASE IF NOT EXISTS Ebola;
@@ -17,7 +18,6 @@ set default_storage_engine = InnoDB;
 
 select CONCAT('storage engine: ', @@default_storage_engine) as INFO;
 
-
 CREATE TABLE Country (
     country_name    VARCHAR(20)     NOT NULL,
     health_exp      INTEGER         NOT NULL,
@@ -28,8 +28,8 @@ CREATE TABLE Country (
 
 CREATE TABLE ETC (
     etc_code        CHAR(8)         NOT NULL,
-    country         VARCHAR(20)     NOT NULL,
-    partner         VARCHAR(20),
+    country_name    VARCHAR(20)     NOT NULL,
+    partner_org     VARCHAR(20),
     etc_name        VARCHAR(20)     NOT NULL,
     latitude        double          NOT NULL,
     longitude       double          NOT NULL,
@@ -37,28 +37,28 @@ CREATE TABLE ETC (
     status          VARCHAR(20)     NOT NULL,
     beds_open       INTEGER         NOT NULL,
     PRIMARY KEY (etc_code),
-    FOREIGN KEY (country)  REFERENCES Country (country_name)    ON DELETE CASCADE
+    FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE Survey_Respondent (
     respid          INTEGER         NOT NULL,
-    country         VARCHAR(20)     NOT NULL,
+    country_name    VARCHAR(20)     NOT NULL,
     gender          CHAR(1)         NOT NULL,
     age             INTEGER         NOT NULL,
     education       INTEGER         NOT NULL,
     corganizedae    INTEGER         NOT NULL,
     PRIMARY KEY (respid),
-    FOREIGN KEY (country)  REFERENCES Country (country_name)    ON DELETE CASCADE
+    FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE Organization (
     acronym         VARCHAR(20)     NOT NULL,
-    country         VARCHAR(20)     NOT NULL,
+    country_name    VARCHAR(20)     NOT NULL,
     etc_code        CHAR(8)         NOT NULL,
     org_name        VARCHAR(50)     NOT NULL,
     org_type        VARCHAR(20)     NOT NULL,
     PRIMARY KEY (acronym),
-    FOREIGN KEY (country)  REFERENCES Country (country_name)    ON DELETE CASCADE
+    FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE ETC_Org (
@@ -72,14 +72,3 @@ CREATE TABLE ETC_Org (
     FOREIGN KEY (etc_code) REFERENCES ETC (etc_code),
     FOREIGN KEY (acronym) REFERENCES Organization (acronym)
 );
-
--- SELECT 'LOADING Country' as 'INFO';
--- source load_Country.dump ;
--- SELECT 'LOADING ETC' as 'INFO';
--- source load_ETC.dump ;
--- SELECT 'LOADING Survey_Respondent' as 'INFO';
--- source load_Survey_Respondent.dump ;
--- SELECT 'LOADING Organization' as 'INFO';
--- source load_Organization.dump ;
--- SELECT 'LOADING ETC_Org' as 'INFO';
--- source load_ETC_Org.dump ;
