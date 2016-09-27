@@ -1,4 +1,15 @@
 # LISTING OF DATASETS
+* Countries of interest: Guinea, Liberia, Sierra Leone.
+* Datasets have been cleaned for better integration into a database. 
+Original datasets from sources can be found in the original_datasets directory.
+
+
+---
+## Comprehensive Dataset  
+### files: comprehensive_dataset.xlsx
+This excel file is a comprehensive spreadsheet containing all used datasets in
+their own respective sheet.  
+
 
 ---
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
@@ -11,17 +22,16 @@ forward any mistakes or requested changes to unmeer.im@gmail.com. Updated
 frequently.
 
 #### METADATA
-Source: UNMEER
-Contributor: UNMEER
-Date of Dataset: Dec 30, 2014
-Location: Guinea,  Liberia,  Sierra Leone
-Visibility: Public
-License: Creative Commons Attribution for Intergovernmental Organisations
-Methodology: Direct Observational Data/Anecdotal Data
-Caveats / Comments: Data may have inaccuracies and will be updated as soon as
-possible with newly-provided information.
+Source: UNMEER (United Nations Mission for Ebola Emergency Response)    
+Contributor: UNMEER     
+Date of Dataset: Dec 30, 2014    
+Location: Guinea,  Liberia,  Sierra Leone  
+Visibility: Public  
+License: Creative Commons Attribution for Intergovernmental Organisations  
+Methodology: Direct Observational Data/Anecdotal Data    
+Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.  
 
-* ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude
+* ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude  
 
 
 ---
@@ -60,13 +70,12 @@ License: Creative Commons Attribution for Intergovernmental Organisations
 Methodology: Sample Survey   
 Caveats / Comments: Data is only available for Liberia.
 
-* ATTRIBUTES OF INTEREST: Country, Respid, Gender, Age, Educ, Corganizedae
+* ATTRIBUTES OF INTEREST: Country, Respid, Gender, Age, Educ, Corganizedae   
 
 
 ---
 ## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis
-### source:
-https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
+### source: https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
 ### files: orgs_involved.csv
 Who, What, Where (3W) dataset on the Ebola response effort. Some entries have a
 maximum level of desegregation up to administrative level 3. The dataset
@@ -89,7 +98,7 @@ License: Public Domain / No Restrictions
 Methodology: Census  
 Caveats / Comments: Data includes Nigeria, which will be omitted.
 
-* ATTRIBUTES OF INTEREST: Country, Acronym, Organization, Type 
+* ATTRIBUTES OF INTEREST: Country, Acronym, Organization, Type   
 
 
 ---
@@ -101,16 +110,10 @@ Includes: what percentage of the country’s population is urban, health expendi
 
 Note: We pulled the data from the website for our 3 countries of interest, as there wasn’t a file to download.
 
-* ATTRIBUTES OF INTEREST: Country, Urban_pop, Health_exp, GDP_cap  
+* ATTRIBUTES OF INTEREST: Country, Urban_pop, Health_exp, GDP_cap   
 
 
 ---
 ## ANOMALIES  
 Note: Our survey dataset only includes respondents from Liberia.
-      Data from the CIA World Facebook is scraped from the site.
-
-___
-## Comprehensive Dataset  
-### files: comprehensive_dataset.xlsx
-This excel file is a comprehensive spreadsheet containing all used datasets in
-their own respective sheet.
+      D

@@ -4,6 +4,14 @@
 * Datasets have been cleaned for better integration into a database. 
 Original datasets from sources can be found in the original_datasets directory.
 
+
+---
+## Comprehensive Dataset  
+### files: comprehensive_dataset.xlsx
+This excel file is a comprehensive spreadsheet containing all used datasets in
+their own respective sheet.  
+
+
 ---
 ## Ebola Treatment Centers or Units (ETCs or ETUs)
 ### source: https://data.humdata.org/dataset/ebola-treatment-centers
@@ -25,6 +33,7 @@ Methodology: Direct Observational Data/Anecdotal Data
 Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.  
 
 * ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude  
+
 
 ---
 ## Data for Ebola Recovery
@@ -109,9 +118,3 @@ Note: We pulled the data from the website for our 3 countries of interest, as th
 ## ANOMALIES  
 Note: Our survey dataset only includes respondents from Liberia.
       Data from the CIA World Facebook is scraped from the site.
-
-___
-## Comprehensive Dataset  
-### files: comprehensive_dataset.xlsx
-This excel file is a comprehensive spreadsheet containing all used datasets in
-their own respective sheet.
