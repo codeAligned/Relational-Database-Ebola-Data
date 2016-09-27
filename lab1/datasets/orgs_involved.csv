@@ -1,4 +1,4 @@
-Country,Acronym,Organisation,Type
+country_name,org_acronym,org_name,org_type
 Guinea,UNFPA,United Nations Population Fund,UN Agency
 Guinea,UNICEF,United Nations Children's Fund,UN Agency
 Guinea,CAFOD,Catholic Agency For Overseas Development,International NGO
@@ -154,4 +154,37 @@ Sierra Leone,UNMEER,UNMEER,UN Agency
 Sierra Leone,CUAMM,Doctors with Africa CUAMM,International Organization
 Sierra Leone,FCA,Finnish Church Aid,International NGO
 Sierra Leone,LWISL,Living Water International Sierra Leone,International NGO
-Sierra Leone,China CDC,Chinese Center for Disease Control and Prevention,International NGO
+Sierra Leone,Chinese CDC,Chinese Center for Disease Control and Prevention,International NGO
+Guinea,IFRC,French Red Cross,
+Guinea,WAHA,Women and Health Alliance International,
+Liberia,PAE,PAE,
+Liberia,,Aspen,
+Liberia,IOM,Institute of Medicine,
+Liberia,MSB,MSB,
+Liberia,,Partners in Health,
+Liberia,ARC,African Risk Capacity,
+Liberia,German RC,German RC,
+Liberia,,German Armed Forces,
+Liberia,MBS Sweden,MBS Sweden,
+Liberia,Nimba CHT,Nimba Country Health Team,
+Liberia,PCI,Project Concern International,
+Liberia,MSF Brussels,Médecins Sans Frontières Brussels,
+Liberia,Chinese FMT,Chinese Foreign Medical Team,
+Liberia,,Firestone,
+Liberia,AU,African Union,
+Liberia,USPHS,US Public Health Service,
+Liberia,Cuban FMT,Cuban Foreign Medical Team,
+Liberia,,Methodist Church,
+Sierra Leone,EMERGENCY,EMERGENCY,
+Sierra Leone,RSLAF,Republic of Sierra Leone Armed Forces,
+Sierra Leone,KINGS,King's Sierra Leone Partnership,
+Sierra Leone,PHE,Public Health England,
+Sierra Leone,MDM,Médecins du Monde,
+Sierra Leone,DTRA,Defense Threat Reduction Agency,
+Sierra Leone,PHA-Canada,Public Health Agency-Canada,
+Sierra Leone,,Well Body,
+Sierra Leone,PIH,Partners in Health,
+Sierra Leone,,Addax,
+Sierra Leone,,British Medical Team,
+Sierra Leone,OCNML,OCNML,
+Sierra Leone,,Cuban Medical Brigade,
