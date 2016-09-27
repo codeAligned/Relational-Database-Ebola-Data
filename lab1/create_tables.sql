@@ -20,9 +20,9 @@ select CONCAT('storage engine: ', @@default_storage_engine) as INFO;
 
 CREATE TABLE Country (
     country_name        VARCHAR(20)     NOT NULL,
-    health_exp          INTEGER         NOT NULL,
+    health_exp          DOUBLE          NOT NULL,
     gdp_cap             INTEGER         NOT NULL,
-    urban_pop           INTEGER         NOT NULL,
+    urban_pop           DOUBLE          NOT NULL,
     PRIMARY KEY (country_name)
 );
 
@@ -43,10 +43,10 @@ CREATE TABLE ETC (
 CREATE TABLE Survey_Respondent (
     respid              INTEGER         NOT NULL,
     country_name        VARCHAR(20)     NOT NULL,
-    gender              CHAR(1)         NOT NULL,
-    age                 INTEGER         NOT NULL    CHECK (age = M or F),
-    education           INTEGER         NOT NULL,
-    corganizedae        INTEGER         NOT NULL,
+    gender              CHAR(1)                     CHECK (gender = M or F or NULL),
+    age                 INTEGER         NOT NULL,
+    education           INTEGER,
+    corganizedae        INTEGER,
     PRIMARY KEY (respid),
     FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
