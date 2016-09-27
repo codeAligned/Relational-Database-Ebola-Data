@@ -31,9 +31,9 @@ CREATE TABLE ETC (
     country_name        VARCHAR(20)     NOT NULL,
     partner_org         VARCHAR(20),
     etc_name            VARCHAR(20)     NOT NULL,
-    latitude            double          NOT NULL,
-    longitude           double          NOT NULL,
-    lab_present         CHAR(1)         NOT NULL,
+    latitude            DOUBLE          NOT NULL,
+    longitude           DOUBLE          NOT NULL,
+    lab_present         CHAR(1)         NOT NULL    CHECK (lab_present = Y|N),
     status              VARCHAR(20)     NOT NULL,
     beds_open           INTEGER         NOT NULL,
     PRIMARY KEY (etc_code),
@@ -44,7 +44,7 @@ CREATE TABLE Survey_Respondent (
     respid              INTEGER         NOT NULL,
     country_name        VARCHAR(20)     NOT NULL,
     gender              CHAR(1)         NOT NULL,
-    age                 INTEGER         NOT NULL,
+    age                 INTEGER         NOT NULL    CHECK (age = M|F),
     education           INTEGER         NOT NULL,
     corganizedae        INTEGER         NOT NULL,
     PRIMARY KEY (respid),
@@ -52,23 +52,23 @@ CREATE TABLE Survey_Respondent (
 );
 
 CREATE TABLE Organization (
-    org_acronym         VARCHAR(20)     NOT NULL,
+    org_name            VARCHAR(50)     NOT NULL,
     country_name        VARCHAR(20)     NOT NULL,
     etc_code            CHAR(8)         NOT NULL,
-    org_name            VARCHAR(50)     NOT NULL,
+    org_acronym         VARCHAR(20)     NOT NULL,
     org_type            VARCHAR(20)     NOT NULL,
-    PRIMARY KEY (org_acronym),
+    PRIMARY KEY (org_name),
     FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE ETC_Org (
-    etc_code        CHAR(8)         NOT NULL,
-    org_acronym     VARCHAR(20)     NOT NULL,
+    etc_code            CHAR(8)         NOT NULL,
+    org_name            VARCHAR(50)     NOT NULL,
     CONSTRAINT PK_ETC_Org PRIMARY KEY
     (
         etc_code,
-        org_acronym
+        org_name
     ),
     FOREIGN KEY (etc_code) REFERENCES ETC (etc_code),
-    FOREIGN KEY (org_acronym) REFERENCES Organization (org_acronym)
+    FOREIGN KEY (org_name) REFERENCES Organization (org_name)
 );
