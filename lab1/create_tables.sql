@@ -56,7 +56,7 @@ CREATE TABLE Organization (
     country_name        VARCHAR(20)     NOT NULL,
     etc_code            CHAR(8)         NOT NULL,
     org_acronym         VARCHAR(20),
-    org_type            VARCHAR(20)     NOT NULL,
+    org_type            VARCHAR(20),
     PRIMARY KEY (org_name),
     FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
