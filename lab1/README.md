@@ -25,7 +25,7 @@ create database <database name>;
 create table <table name> 
 ...   
 
-Run the create_tables.sql script on your local MySQL instance either through Workbench or from a MySQL shell. Fix any syntax errors you encounter and re-run it until it functions as expected.
+Run the create_tables.sql script on your local MySQL instance either through Workbench or from a MySQL shell. Fix any syntax errors you encounter and re-run it until it functions as expected.  
 6. Save all files in a folder called lab1. Add this folder and its contents to your team's github private repo. Locate the commit id that you will be using for your submission. This is a long 40-character that shows up on your main Github repo page next to the heading "Latest commit" (e.g. commit 4c91ea6dd1a04b12e77c244d49454d77708dd61a). Copy the commit id and paste it into an email. Your email should contain the following: a link to your team's repo and the commit id of the code that you want to submit. Your email should be addressed to the professor and both TAs and carbon copying your lab partner. The email should have the following subject, replacing <TeamName> with your actual team name: [CS327E][Lab1][<TeamName>]. The email is due by 11:59pm on Friday, 09/23. If it's late, there will be a 10% grade reduction per late day. This late policy is also documented in the syllabus. Note: Only one person per team should send the submission email.
 
 ## Naming Conventions:
