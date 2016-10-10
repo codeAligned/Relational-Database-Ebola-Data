@@ -30,19 +30,19 @@ Every import script reads the files it needs from a local directory and populate
 
 6. Ensure that all the scripts and datasets are in your lab2 folder on Github. Locate the last commit id that you are using for your submission and paste it into an email. Your email should also contain a link to your team's repo on Github. Address the email to the professor and both TAs and carbon copy your lab 2 partner. The subject of the email should be: [CS327E][Lab2][<TeamName>], replacing <TeamName> with your actual team name. The email is due Tuesday, 10/18 at 11:59pm. If it's late, there will be a 10% grade reduction per late day. This late policy is also documented in the syllabus. Note: only one person per team should send the submission email.
   
-### Coding Conventions:
+## Coding Conventions:
 1. Place all reusable code in functions. For example, the database connection code should be defined in its own function because it’s used throughout the program. Points will be deducted for duplicate code.
 2. Use basic error handling with try-except blocks. Catch only the errors that you can handle and exit the program when an error is fatal (e.g. missing input data file, invalid database connection, etc). Use print statements in the except block to report the error regardless of whether you choose to continue or exit the program.
 
-### Teamwork & Collaboration:
+## Teamwork & Collaboration:
 1. We will use 3 class meetings (10/10, 10/12, and 10/12) to work on this lab.
 2. We expect each team to split up the work as evenly as possible and both do multiple GitHub commits, open and resolve issues.
 3. We expect each team to be making commits throughout the project. We don’t want to see a single commit right before the assignment is turned in.
 4. We expect each team to use the Github Issue Tracker to assign tasks and track their status. We will be reviewing the Issue Tracker to ensure that each team member is contributing to the project.
 
-### Resources:
-Lab 2 Setup Document: http://tinyurl.com/hymam9a
-Lab 2 Grading Rubric: http://tinyurl.com/haagutb
-Lab 2 Team Sign-up Sheet: http://tinyurl.com/j6hzgvw
-Code Samples: https://github.com/cs327e-fall2016/snippets
+## Resources:
+Lab 2 Setup Document: http://tinyurl.com/hymam9a  
+Lab 2 Grading Rubric: http://tinyurl.com/haagutb  
+Lab 2 Team Sign-up Sheet: http://tinyurl.com/j6hzgvw  
+Code Samples: https://github.com/cs327e-fall2016/snippets  
 
