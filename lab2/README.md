@@ -58,9 +58,9 @@ remote repo on Github.
 4. Write a rollback script in Python for each table. The rollback script deletes all records from
    the table. It also resets the AUTO_INCREMENT on the table when one exists. This allows the import
 to be run multiple times without manual intervention between the runs. To reset the AUTO_INCREMENT,
-use the command: ALTER TABLE <Table> AUTO_INCREMENT = 1; The rollback script doesn’t drop and
+use the command: ALTER TABLE \<Table> AUTO_INCREMENT = 1; The rollback script doesn’t drop and
 re-create the tables. The rollback script assumes that each table already exists. Name the rollback
-scripts rollback_<Table>.py, replacing <Table> with the actual table name.Commit the rollback
+scripts rollback_\<Table>.py, replacing \<Table> with the actual table name.Commit the rollback
 scripts to your team's private repo and push the commit to your remote repo on Github.
 
 5. Write a main script that executes all the rollback and import table scripts. The main script
@@ -74,10 +74,11 @@ team's private repo and push the commit to your remote repo on Github.
 6. Ensure that all the scripts and datasets are in your lab2 folder on Github. Locate the last
    commit id that you are using for your submission and paste it into an email. Your email should
 also contain a link to your team's repo on Github. Address the email to the professor and both TAs
-and carbon copy your lab 2 partner. The subject of the email should be: [CS327E][Lab2][<TeamName>],
-replacing <TeamName> with your actual team name. The email is due Tuesday, 10/18 at 11:59pm. If it's
-late, there will be a 10% grade reduction per late day. This late policy is also documented in the
-syllabus. Note: only one person per team should send the submission email.
+and carbon copy your lab 2 partner. The subject of the email should be:
+[CS327E][Lab2][\<TeamName>],replacing \<TeamName> with your actual team name. The email is due
+Tuesday, 10/18 at 11:59pm. If it's late, there will be a 10% grade reduction per late day. This late
+policy is also documented in the syllabus. Note: only one person per team should send the submission
+email.
   
 ## Coding Conventions:
 1. Place all reusable code in functions. For example, the database connection code should be defined
