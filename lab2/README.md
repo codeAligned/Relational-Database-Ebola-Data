@@ -28,11 +28,11 @@ Github.
    import script will vary based on the type of table that is being populated. For base tables, the
 script reads in the raw data file(s) using the appropriate Python library (e.g. csv or json or
 xml.etree), does some re-formatting of the input data in Python as needed, and writes out the output
-to a database table . The output is written using INSERT statements executed through the PyMySQL
+to a database table. The output is written using INSERT statements executed through the PyMySQL
 connector (see lecture notes and code snippets for examples of how to do this). For junction tables,
 the script reads in the records from at least two base tables and writes out the output to the
 junction table. It may also read in one or more raw data file(s) if the many-to-many relationship
-contains attributes of its own.  Every import script reads the files it needs from a local directory
+contains attributes of its own. Every import script reads the files it needs from a local directory
 and populates a different table. Name each script import_\<Table>.py, replacing \<Table> with the
 actual table name that the script is populating. For example, import_Country.py if the table name is
 Country. Make sure that each script contains some basic exception handling that prints out the error
@@ -75,7 +75,7 @@ team's private repo and push the commit to your remote repo on Github.
    commit id that you are using for your submission and paste it into an email. Your email should
 also contain a link to your team's repo on Github. Address the email to the professor and both TAs
 and carbon copy your lab 2 partner. The subject of the email should be:
-[CS327E][Lab2][\<TeamName>],replacing \<TeamName> with your actual team name. The email is due
+[CS327E][Lab2][\<TeamName>], replacing \<TeamName> with your actual team name. The email is due
 Tuesday, 10/18 at 11:59pm. If it's late, there will be a 10% grade reduction per late day. This late
 policy is also documented in the syllabus. Note: only one person per team should send the submission
 email.
