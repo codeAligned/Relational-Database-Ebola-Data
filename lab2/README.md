@@ -33,7 +33,7 @@ connector (see lecture notes and code snippets for examples of how to do this). 
 the script reads in the records from at least two base tables and writes out the output to the
 junction table. It may also read in one or more raw data file(s) if the many-to-many relationship
 contains attributes of its own.  Every import script reads the files it needs from a local directory
-and populates a different table. Name each script import_<Table>.py, replacing <Table> with the
+and populates a different table. Name each script import_\<Table>.py, replacing <Table> with the
 actual table name that the script is populating. For example, import_Country.py if the table name is
 Country. Make sure that each script contains some basic exception handling that prints out the error
 and the place in the code where the error occurred (again, see slides/snippets for examples of
