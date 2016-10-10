@@ -49,7 +49,7 @@ script until the script is error free. Otherwise, make note of the error and pro
 description of what is causing the error to occur during the import. An example of an error that is
 fixable is “Cannot add or update a child row: a foreign key constraint fails” as opposed to
 “Duplicate entry for ‘mna34’ for key ‘PRIMARY’” which is not fixable without altering the raw data.
-Name each file import_<Table>.txt, replacing <Table> with the actual table name. Note that each file
+Name each file import_\<Table>.txt, replacing \<Table> with the actual table name. Note that each file
 should contain the run time information, the number of records imported, and any import errors that
 could not be fixed along with their descriptions. You do not need to mention the fixable errors that
 you encountered. Commit the import txt files to your team's private repo and push the commit to your
