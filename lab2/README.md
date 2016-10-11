@@ -1,4 +1,4 @@
-# CS 327E Lab 2: Relational Database Design Learning Objectives:
+## CS 327E Lab 2: Relational Database Design Learning Objectives:
 1. Continue working with the same real dataset(s)
 2. Continue working with your partner
 3. Continue working with the database schema that you created as part of Lab 1 and revise if necessary 
