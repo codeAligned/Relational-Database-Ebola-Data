@@ -4,6 +4,10 @@
 
 #### This is a repo for CS327E.
 
-Repo Owners:
+#### Repo Owners:
 * Justin Chao
 * Julianne Crea
+
+##### Lab 1: Entity Relationship Diagrams
+##### Lab 2: Data Loads
+##### Lab 3: Query Interface
