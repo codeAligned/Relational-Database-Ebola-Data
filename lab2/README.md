@@ -100,7 +100,7 @@ you choose to continue or exit the program.
 project.
 
 ## Resources:
-- Lab 2 Setup Document: http://tinyurl.com/hymam9a  
-- Lab 2 Grading Rubric: http://tinyurl.com/haagutb  
-- Lab 2 Team Sign-up Sheet: http://tinyurl.com/j6hzgvw  
-- Code Samples: https://github.com/cs327e-fall2016/snippets    
+- Lab 2 Setup Document     : http://tinyurl.com/hymam9a   
+- Lab 2 Grading Rubric     : http://tinyurl.com/haagutb  
+- Lab 2 Team Sign-up Sheet : http://tinyurl.com/j6hzgvw  
+- Code Samples             : https://github.com/cs327e-fall2016/snippets  
