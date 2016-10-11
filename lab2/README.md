@@ -1,106 +1,120 @@
-# CS 327E Lab 2: Relational Database Design Learning Objectives:
-1. Continue working with the same real dataset(s)
-2. Continue working with your partner
-3. Continue working with the database schema that you created as part of Lab 1 and revise if necessary 
-4. Populate the database tables using SQL statements and Python
-5. Gain some experience using a database connector
+# LISTING OF DATASETS
+* This listing is copied in data_sources.txt.
+* Countries of interest: Guinea, Liberia, Sierra Leone.
+* Datasets have been cleaned for better integration into a database. 
+Original datasets from sources can be found in the original_datasets directory.
 
-## Prerequisites:
-1. Lab 1 completed
-2. Python 2.7 installed
-3. Pip2 installed
-3. Latest PyMySQL connector installed
-4. Sublime Text editor installed
-(see setup doc for how to install Python, pip2, PyMySQL and link to Sublime Text)
 
-## Steps Outlined:
-0. Perform any reworks and/or enhancements to your Lab 1 submission that were noted in your graded
-   rubric.  For example, if we asked you to redefine an entity, you’ll need to have made the 
-necessary changes to the diagrams, data dictionary, and create tables script before continuing with
-this Lab.
+---
+## Comprehensive Dataset  
+### files: comprehensive_dataset.xlsx
+This excel file is a comprehensive spreadsheet containing all used datasets in
+their own respective sheet.  
 
-1. Create a new folder in your local git repository called lab2. All the work you do for this lab
-   will go into this folder. For now, copy all the datasets that you are working with into this
-folder. Commit this folder to your team's private repo and push the commit to your remote repo on
-Github.
 
-2. Write an import script (separate Python program) for each table in your schema. The form of the
-   import script will vary based on the type of table that is being populated. For base tables, the
-script reads in the raw data file(s) using the appropriate Python library (e.g. csv or json or
-xml.etree), does some re-formatting of the input data in Python as needed, and writes out the output
-to a database table. The output is written using INSERT statements executed through the PyMySQL
-connector (see lecture notes and code snippets for examples of how to do this). For junction tables,
-the script reads in the records from at least two base tables and writes out the output to the
-junction table. It may also read in one or more raw data file(s) if the many-to-many relationship
-contains attributes of its own. Every import script reads the files it needs from a local directory
-and populates a different table. Name each script import_\<Table>.py, replacing \<Table> with the
-actual table name that the script is populating. For example, import_Country.py if the table name is
-Country. Make sure that each script contains some basic exception handling that prints out the error
-and the place in the code where the error occurred (again, see slides/snippets for examples of
-exception handling in this context). Commit the import scripts to your team's private repo and push
-the commit to your remote repo on Github.
+---
+## Ebola Treatment Centers or Units (ETCs or ETUs)
+### source: https://data.humdata.org/dataset/ebola-treatment-centers
+### files: ETC.csv
+This dataset represents the best-known collection of status and location of the
+facilities known as Ebola Treatment Centers or Ebola Treatment Units in Guinea,
+Liberia and Sierra Leone, with relevant attributes and information. Please
+forward any mistakes or requested changes to unmeer.im@gmail.com. Updated
+frequently.
 
-3. Run each import script in Sublime using the Build option from the Tools menu and make note of the
-   run time. The run time will appear in the output window below the executed code as: [Finished in
-x seconds]. In addition to the run time, make note of the total number of records imported into the
-table. Also, note any errors that occur during the import. Investigate the root cause of each error.
-If the error can be avoided by altering the code without altering the raw data, do so and re-run the
-script until the script is error free. Otherwise, make note of the error and provide a brief
-description of what is causing the error to occur during the import. An example of an error that is
-fixable is “Cannot add or update a child row: a foreign key constraint fails” as opposed to
-“Duplicate entry for ‘mna34’ for key ‘PRIMARY’” which is not fixable without altering the raw data.
-Name each file import_\<Table>.txt, replacing \<Table> with the actual table name. Note that each file
-should contain the run time information, the number of records imported, and any import errors that
-could not be fixed along with their descriptions. You do not need to mention the fixable errors that
-you encountered. Commit the import txt files to your team's private repo and push the commit to your
-remote repo on Github.
+#### METADATA
+Source: UNMEER (United Nations Mission for Ebola Emergency Response)    
+Contributor: UNMEER     
+Date of Dataset: Dec 30, 2014    
+Location: Guinea,  Liberia,  Sierra Leone  
+Visibility: Public  
+License: Creative Commons Attribution for Intergovernmental Organisations  
+Methodology: Direct Observational Data/Anecdotal Data    
+Caveats / Comments: Data may have inaccuracies and will be updated as soon as possible with newly-provided information.  
 
-4. Write a rollback script in Python for each table. The rollback script deletes all records from
-   the table. It also resets the AUTO_INCREMENT on the table when one exists. This allows the import
-to be run multiple times without manual intervention between the runs. To reset the AUTO_INCREMENT,
-use the command: ALTER TABLE \<Table> AUTO_INCREMENT = 1; The rollback script doesn’t drop and
-re-create the tables. The rollback script assumes that each table already exists. Name the rollback
-scripts rollback_\<Table>.py, replacing \<Table> with the actual table name.Commit the rollback
-scripts to your team's private repo and push the commit to your remote repo on Github.
+* ATTRIBUTES OF INTEREST: Country, ECF_Code, Status, Partner, Latitude, Longitude  
 
-5. Write a main script that executes all the rollback and import table scripts. The main script
-   should first call the rollback scripts followed by the import scripts. Ensure that the scripts
-are called in the right sequence, such that each parent table is populated before its children. The
-main script should print the return status of each script that it runs and report if the script ran
-successfully or with errors. If the error was caused by running the import in the wrong order, fix
-the code and re-run. Name the main script populate_database.py. Commit the main script to your
-team's private repo and push the commit to your remote repo on Github.
 
-6. Ensure that all the scripts and datasets are in your lab2 folder on Github. Locate the last
-   commit id that you are using for your submission and paste it into an email. Your email should
-also contain a link to your team's repo on Github. Address the email to the professor and both TAs
-and carbon copy your lab 2 partner. The subject of the email should be:
-[CS327E][Lab2][\<TeamName>], replacing \<TeamName> with your actual team name. The email is due
-Tuesday, 10/18 at 11:59pm. If it's late, there will be a 10% grade reduction per late day. This late
-policy is also documented in the syllabus. Note: only one person per team should send the submission
-email.
-  
-## Coding Conventions:
-1. Place all reusable code in functions. For example, the database connection code should be defined
-   in its own function because it’s used throughout the program. Points will be deducted for
-duplicate code.
-2. Use basic error handling with try-except blocks. Catch only the errors that you can handle and
-   exit the program when an error is fatal (e.g. missing input data file, invalid database
-connection, etc). Use print statements in the except block to report the error regardless of whether
-you choose to continue or exit the program.
+---
+## Data for Ebola Recovery
+### source: https://data.humdata.org/dataset/data-for-ebola-recovery
+### files: data_survey.csv , survey_ref.xlsx
+Data on health, economic livelihoods, food security, and ebola vigilance from
+representative survey of Monrovia conducted in December 2014, March 2015, and
+June 2015. Full details, results and analysis can be found at
+data4ebolarecovery.org
 
-## Teamwork & Collaboration:
-1. We will use 3 class meetings (10/10, 10/12, and 10/12) to work on this lab.
-2. We expect each team to split up the work as evenly as possible and both do multiple GitHub
-   commits, open and resolve issues.
-3. We expect each team to be making commits throughout the project. We don’t want to see a single
-   commit right before the assignment is turned in.
-4. We expect each team to use the Github Issue Tracker to assign tasks and track their status. We
-   will be reviewing the Issue Tracker to ensure that each team member is contributing to the
-project.
+The December survey was conducted from December 6, 2014 to January 7, 2015 by
+our implementing partner, Parley, a Liberian NGO. Enumerators conducted surveys
+in person using handheld devices operating the Pendragon Survey Software.
+Follow-up surveys in March and June were conducted by phone.
 
-## Resources:
-- Lab 2 Setup Document: http://tinyurl.com/hymam9a  
-- Lab 2 Grading Rubric: http://tinyurl.com/haagutb  
-- Lab 2 Team Sign-up Sheet: http://tinyurl.com/j6hzgvw  
-- Code Samples: https://github.com/cs327e-fall2016/snippets    
+The selection of respondents followed a three-stage sampling procedure. In the
+the first stage, 77 communities were randomly selected from all of Monrovia’s
+fifteen administrative wards in proportion to their population size. In the
+second stage, twenty households were randomly selected within each community
+following a random-walk procedure. Within each household, a single adult
+respondent was randomly selected for the survey. The response rate was 95%.
+
+The survey covered outreach efforts, attitudes toward survivors, knowledge of
+Ebola symptoms and transmission paths, uptake of Ebola prevention practices,
+Ebola incidence histories, health outcomes, food security, economic outcomes,
+and social outcomes. The survey lasted about 45 minutes on average.
+
+#### METADATA
+Source: MIT Governance Lab  
+Contributor: MIT Governance Lab  
+Date of Dataset: Dec 04, 2014 - Jan 07, 2015   
+Location: Liberia   
+Visibility: Public  
+License: Creative Commons Attribution for Intergovernmental Organisations    
+Methodology: Sample Survey   
+Caveats / Comments: Data is only available for Liberia.
+
+* ATTRIBUTES OF INTEREST: Country, Respid, Gender, Age, Educ, Corganizedae   
+
+
+---
+## 3W Dataset on the Organizations Involved in the Response to the Ebola Crisis
+### source: https://data.humdata.org/dataset/3w-dataset-on-the-organizations-involved-in-the-response-to-the-ebola-crisis
+### files: orgs_involved.csv
+Who, What, Where (3W) dataset on the Ebola response effort. Some entries have a
+maximum level of desegregation up to administrative level 3. The dataset
+contains data from Guinea, Liberia, Sierra Leone, and Nigeria.
+
+This dataset is updated weekly. Last Update 17 Nov. 2014
+
+Note: If your humanitarian organization would like to make a correction or
+update the dataset, please contact the OCHA focal point for the respective
+country. Contacts can be found at
+https://wca.humanitarianresponse.info/fr/emergencies/virus-ebola
+
+#### METADATA
+Source: UNOCHA ROWCA    
+Contributor: OCHA ROWCA  
+Date of Dataset: Dec 05, 2014  
+Location: Guinea,  Liberia,  Nigeria,  Sierra Leone  
+Visibility: Public  
+License: Public Domain / No Restrictions 
+Methodology: Census  
+Caveats / Comments: Data includes Nigeria, which will be omitted.
+
+* ATTRIBUTES OF INTEREST: Country, Acronym, Organization, Type   
+
+
+---
+## Data on Country Statistics
+### source: https://www.cia.gov/library/publications/the-world-factbook/
+### files: CIA_World_Factbook.csv
+Dataset on statistics for Liberia, Sierra Leone, and Guinea.
+Includes: what percentage of the country’s population is urban, health expenditures as a percentage of GDP, and GDP per capita in US dollars.
+
+Note: We pulled the data from the website for our 3 countries of interest, as there wasn’t a file to download.
+
+* ATTRIBUTES OF INTEREST: Country, Urban_pop, Health_exp, GDP_cap   
+
+
+---
+## ANOMALIES  
+Note: Our survey dataset only includes respondents from Liberia.
+      Data from the CIA World Facebook is scraped from the site.
