@@ -1,31 +1,8 @@
-# Import ETC Table
+# Import ETC from ETC.csv
 
 import pymysql
 import csv
-
-def create_connection():
-    try:
-        connection = pymysql.connect(host="127.0.0.1",
-                                     user="root",
-                                     passwd="",
-                                     db="Ebola")
-        return connection
-    
-    except pymysql.Error as error:
-        print ("connection error: ", error)
-
-
-def run_insert(insert_stmt):
-    try:
-        conn = create_connection()
-        cur = conn.cursor()
-        cur.execute(insert_stmt)
-        conn.commit()
-        destroy_connection(conn)
-
-    except pymysql.Error as error:
-        print ("insert error: ", error)
-
+from db_connect import *
 
 def import_csv():
     insert_prefix = "insert into ETC (etc_code,	etc_name, status, beds_open, partner_org, latitude, longitude, lab_present, country_name) values ("
@@ -50,17 +27,5 @@ def import_csv():
     except IOError as e:
         print ("IO Error: " + e.strerror)
 
-
-def destroy_connection(conn):
-    conn.close()
-
-
-def main():
+if __name__ == '__main__':
     import_csv()
-main()
-
-
-
-
-        
-    

@@ -42,9 +42,9 @@ CREATE TABLE ETC (
 
 CREATE TABLE Survey_Respondent (
     respid              INTEGER         NOT NULL,
-    country_name        VARCHAR(50)     NOT NULL,
+    country_name        VARCHAR(50),
     gender              CHAR(1)                     CHECK (gender = M or F or NULL),
-    age                 INTEGER         NOT NULL,
+    age                 INTEGER,
     education           INTEGER,
     corganizedae        INTEGER,
     PRIMARY KEY (respid),
@@ -52,7 +52,7 @@ CREATE TABLE Survey_Respondent (
 );
 
 CREATE TABLE Organization (
-    org_name            VARCHAR(50)     NOT NULL,
+    org_name            VARCHAR(100)     NOT NULL,
     country_name        VARCHAR(50)     NOT NULL,
     -- etc_code            CHAR(8)         NOT NULL,
     org_acronym         VARCHAR(50),

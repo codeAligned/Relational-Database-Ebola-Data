@@ -6,7 +6,7 @@ from db_connect import *
 
 def import_csv():
 
-    insert_stmt = "insert into Organization (country_name, org_acronym, org_name, org_type) values (%s, %s, %s, %s)"
+    insert_stmt = "INSERT INTO Organization (country_name, org_acronym, org_name, org_type) VALUES (%s, %s, %s, %s)"
 
     try:
         csvfile = open('../datasets/orgs_involved.csv', 'rb')

@@ -6,7 +6,8 @@ from db_connect import *
 
 
 def import_csv():
-    insert_prefix = "insert into Country (country_name, urban_pop, health_exp, gdp_cap) values ("
+    insert_prefix = "INSERT INTO Country (country_name, urban_pop, health_exp, gdp_cap) VALUES ("
+
     try:
         csvfile = open('../Datasets/CIA_World_Factbook.csv', "rb")
         reader = csv.reader(csvfile)
@@ -21,14 +22,13 @@ def import_csv():
                     insert_stmt += val + ", "
                 else:                                   # handles last/numeric value
                     insert_stmt += val 
+
             insert_stmt += ");"
-            print(insert_stmt)
+            # print(insert_stmt)
             run_insert(insert_stmt)
                 
     except IOError as e:
         print ("IO Error: " + e.strerror)
-
-
 
 def main():
     import_csv()
