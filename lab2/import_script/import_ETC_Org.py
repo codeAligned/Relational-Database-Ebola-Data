@@ -1,31 +1,23 @@
 # Import ETC_Org junction table
 
 import pymysql
-import csv
-from db_connect import *
 
-def import_csv():
-    insert_prefix = "insert into ETC (etc_code,	etc_name, status, beds_open, partner_org, latitude, longitude, lab_present, country_name) values ("
-    try:
-        csvfile = open("ETC.csv", "rb")
-        reader = csv.reader(csvfile)
-        for i, row in enumerate(reader):
-            if i==0: continue                           # skip column names row      
-            insert_stmt = insert_prefix
-            
-            for j, val in enumerate(row):
-                if j==0 or j==1 or j==2 or j==4 or j==7:
-                    insert_stmt += "'" + val + "', "
-                elif j==3 or j==5 or j==6:              # handles numeric types
-                    insert_stmt += val + ", "
-                else:                                   # handles last value
-                    insert_stmt += "'" + val + "'"
-            insert_stmt += ");"
-            print(insert_stmt)
-            run_insert(insert_stmt)
-                
-    except IOError as e:
-        print ("IO Error: " + e.strerror)
+db = pymysql.connect (host   ="localhost", # your host, for this lab, you don't need to change
+                      user   = "root",     # your username
+                      passwd = "",         # your password
+                      db     = "ebola")    # name of the database
 
-if __name__ == '__main__':
-    import_csv()
+cur_etc = db.cursor()
+cur_org = db.cursor()
+cur_jnc = db.cursor()
+
+
+for row in cur_jnc.fetchall():
+    for row in cur_etc.fetchall():
+        cur_etc.execute("SELECT etc_code INTO @ecode FROM ETC")
+    for row in cur_org.fetchall():
+        cur_org.execute("SELECT org_name INTO @oname FROM Organization")
+    cur_jnc.execute("INSERT INTO ETC_Org (etc_code, org_name) VALUES (@ecode, @oname)")
+
+
+db.close()

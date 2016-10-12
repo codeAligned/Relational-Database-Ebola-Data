@@ -5,7 +5,7 @@ import csv
 from db_connect import *
 
 def import_csv():
-    insert_prefix = "insert into ETC (etc_code,	etc_name, status, beds_open, partner_org, latitude, longitude, lab_present, country_name) values ("
+    insert_prefix = "INSERT INTO ETC (etc_code,	etc_name, status, beds_open, partner_org, latitude, longitude, lab_present, country_name) VALUES ("
 
     try:
         csvfile = open("../Datasets/ETC.csv", "rb")
