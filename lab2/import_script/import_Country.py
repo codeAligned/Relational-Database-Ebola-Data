@@ -2,35 +2,13 @@
 
 import pymysql
 import csv
-
-def create_connection():
-    try:
-        connection = pymysql.connect(host="127.0.0.1",
-                                     user="root",
-                                     passwd="",
-                                     db="Ebola")
-        return connection
-    
-    except pymysql.Error as error:
-        print ("connection error: ", error)
-
-
-def run_insert(insert_stmt):
-    try:
-        conn = create_connection()
-        cur = conn.cursor()
-        cur.execute(insert_stmt)
-        conn.commit()
-        destroy_connection(conn)
-
-    except pymysql.Error as error:
-        print ("insert error: ", error)
+from db_connect import *
 
 
 def import_csv():
     insert_prefix = "insert into Country (country_name, urban_pop, health_exp, gdp_cap) values ("
     try:
-        csvfile = open("../Datasets/CIA_World_Factbook.csv", "rb")
+        csvfile = open('../Datasets/CIA_World_Factbook.csv', "rb")
         reader = csv.reader(csvfile)
         for i, row in enumerate(reader):
             if i==0: continue                           # skip column names row      
@@ -50,9 +28,6 @@ def import_csv():
     except IOError as e:
         print ("IO Error: " + e.strerror)
 
-
-def destroy_connection(conn):
-    conn.close()
 
 
 def main():
