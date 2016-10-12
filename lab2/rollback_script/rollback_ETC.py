@@ -1,4 +1,4 @@
-# Import Country Table
+# Rollback ETC Table
 
 import pymysql
 
@@ -14,11 +14,11 @@ def create_connection():
         print ("connection error: ", error)
 
 
-def run_insert(insert_stmt):
+def run_insert(rollback_stmt):
     try:
         conn = create_connection()
         cur = conn.cursor()
-        cur.execute(insert_stmt)
+        cur.execute(rollback_stmt)
         conn.commit()
         destroy_connection(conn)
 
@@ -27,10 +27,10 @@ def run_insert(insert_stmt):
 
 
 def rollback():
-    insert_stmt = "DELETE FROM ETC;"
+    rollback_stmt = "DELETE FROM ETC;"
     try:
-            print(insert_stmt)
-            run_insert(insert_stmt)
+            print(rollback_stmt)
+            run_insert(rollback_stmt)
                 
     except IOError as e:
         print ("IO Error: " + e.strerror)

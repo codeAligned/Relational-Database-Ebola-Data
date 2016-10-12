@@ -1,4 +1,4 @@
-# Import Country Table
+# Rollback Country Table
 
 import pymysql
 
