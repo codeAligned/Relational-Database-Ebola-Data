@@ -6,9 +6,11 @@ from db_connect import *
 
 def import_csv():
     insert_prefix = "insert into ETC (etc_code,	etc_name, status, beds_open, partner_org, latitude, longitude, lab_present, country_name) values ("
+
     try:
-        csvfile = open("ETC.csv", "rb")
+        csvfile = open("../Datasets/ETC.csv", "rb")
         reader = csv.reader(csvfile)
+
         for i, row in enumerate(reader):
             if i==0: continue                           # skip column names row      
             insert_stmt = insert_prefix
@@ -21,7 +23,8 @@ def import_csv():
                 else:                                   # handles last value
                     insert_stmt += "'" + val + "'"
             insert_stmt += ");"
-            print(insert_stmt)
+
+            # print(insert_stmt)
             run_insert(insert_stmt)
                 
     except IOError as e:
