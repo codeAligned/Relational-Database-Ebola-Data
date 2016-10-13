@@ -1,12 +1,10 @@
--- Ebola database
--- SQL script
+-- create_tables.sql for Ebola database
 
 DROP DATABASE IF EXISTS Ebola;
 CREATE DATABASE IF NOT EXISTS Ebola;
 USE Ebola;
 
 SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
-
 
 DROP TABLE IF EXISTS    Country,
                         ETC,
