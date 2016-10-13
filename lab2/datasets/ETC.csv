@@ -1,5 +1,5 @@
 etc_code,etc_name,status,beds_open,partner_org,latitude,longitude,lab_present,country_name
-GIN_0011,Macenta,Open,70,FRENCH RED CROSS,8.541,-9.471,Y,Guinea
+GIN_0011,Macenta,Open,70,French Red Cross,8.541,-9.471,Y,Guinea
 GIN_0010,Gueckedou,Open,100,MSF,8.562,-10.133,Y,Guinea
 GIN_0001,Conakry Donka Hospital,Open,70,MSF,9.535,-13.683,Y,Guinea
 GIN_0003,Coyah,Under Construction,0,,9.73,-13.421,N,Guinea
@@ -64,7 +64,7 @@ SLE_0001,Goderich,Open,32,EMERGENCY,8.424321,-13.280407,Y,Sierra Leone
 SLE_0002,Hastings,Open,10,RSLAF,8.382142,-13.140652,Y,Sierra Leone
 SLE_0002,,,,KINGS,,,,
 SLE_0002,,,,EU,,,,
-SLE_0004,Police Training Sch-Hastings 1,Open,20,MOH,8.382705,-13.125851,N,Sierra Leone
+SLE_0004,Police Training Sch-Hastings 1,Open,20,MoH,8.382705,-13.125851,N,Sierra Leone
 SLE_0004,,,,RSLAF,,,,
 SLE_0005,Kerry Town STC,Open,7,Save the Children,8.257095,-13.086371,Y,Sierra Leone
 SLE_0005,,,,PHE,,,,
