@@ -42,3 +42,7 @@ def import_Partner_Orgs():
         print ("import Partner_Orgs Error: " + e.strerror)
 
     return is_success
+
+# def main():
+    # import_Partner_Orgs()
+# main()

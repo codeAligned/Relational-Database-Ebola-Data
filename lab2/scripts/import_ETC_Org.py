@@ -52,3 +52,7 @@ def import_ETC_Org():
         print ("import ETC_Org Error: " + e.strerror)
 
     return is_success
+
+# def main():
+    # import_ETC_Org()
+# main()

@@ -47,3 +47,7 @@ def import_ETC():
         print ("import ETC Error: " + e.strerror)
     
     return is_success
+
+# def main():
+    # import_ETC()
+# main()

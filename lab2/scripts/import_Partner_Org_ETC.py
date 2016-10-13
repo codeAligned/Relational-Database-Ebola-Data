@@ -39,3 +39,7 @@ def import_Partner_Org_ETC():
         print ("import Partner_Org_ETC Error: " + e.strerror)
 
     return is_success
+
+# def main():
+    # import_Partner_Org_ETC()
+# main()

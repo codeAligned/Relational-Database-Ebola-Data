@@ -49,3 +49,7 @@ def import_Organization():
         print ('import Organization Error: ' + e.strerror)
 
     return is_success
+
+# def main():
+    # import_Organization()
+# main()
