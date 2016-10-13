@@ -4,7 +4,8 @@ import pymysql
 import csv
 from db_connect import *
 
-def import_csv():
+def import_Partner_Orgs():
+    is_success = True
     insert_prefix = "INSERT INTO Partner_Orgs (partner_org) VALUES ("
 
     try:
@@ -29,16 +30,15 @@ def import_csv():
                         insert_stmt += "'" + val + "'"
                     else:
                         continue
-
-
+            
             insert_stmt += ");"
-                    
-
-            run_insert(insert_stmt)
+            insert_status = run_insert(insert_stmt)
+            if insert_status is False:
+                is_success = False
+                return is_success
                 
     except IOError as e:
-        print ("IO Error: " + e.strerror)
+        is_success = False
+        print ("import_Partner_Orgs Error: " + e.strerror)
 
-def main():
-    import_csv()
-main()
+    return is_success

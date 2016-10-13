@@ -1,10 +1,10 @@
-# Import ETC_Org 
-
+# Populate ETC_Org Junction Table from ETC.csv and orgs_involved.csv
 import pymysql
 import csv
 from db_connect import *
 
-def import_csv():
+def import_ETC_Org():
+    is_success = True
     insert_prefix = "INSERT INTO ETC_Org (etc_code, org_name) VALUES ("
 
     try:
@@ -42,12 +42,13 @@ def import_csv():
                         insert_stmt += "'" + val + "'"
 
             insert_stmt += ");"
-            run_insert(insert_stmt)
-                
+            insert_status = run_insert(insert_stmt)
+            if insert_status is False:
+                is_success = False
+                return is_success
 
     except IOError as e:
-        print ("IO Error: " + e.strerror)
+        is_success = False
+        print ("import_ETC_Org Error: " + e.strerror)
 
-def main():
-    import_csv()
-main()
+    return is_success

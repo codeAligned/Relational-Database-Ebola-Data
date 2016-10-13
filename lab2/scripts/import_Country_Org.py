@@ -1,20 +1,13 @@
-# Import Country_Org junction table
-
+# Populate Country_Org junction table from orgs_involved.csv
 import pymysql
 import csv
 from db_connect import *
 
-db = pymysql.connect (host   ="localhost", # your host, for this lab, you don't need to change
-                      user   = "root",     # your username
-                      passwd = "",         # your password
-                      db     = "ebola")    # name of the database
-
-def import_csv():
-
+def import_Country_Org():
+    is_success = True
     insert_stmt = "INSERT INTO Country_Org (country_name, org_name) VALUES ("
     
     try:
-
         csvfile = open("../Datasets/orgs_involved.csv", "rb")
         reader = csv.reader(csvfile)
         
@@ -30,10 +23,13 @@ def import_csv():
 
             if i==1:
                 print(insert_stmt)
-            run_insert(insert_stmt)
+            insert_status = run_insert(insert_stmt)
+            if insert_status is False:
+                is_success = False
+                return is_success
                 
     except IOError as e:
-        print ("IO Error: " + e.strerror)
-
-if __name__ == '__main__':
-    import_csv()
+        is_success = False
+        print ("import_Country_Org Error: " + e.strerror)
+    
+    return is_success

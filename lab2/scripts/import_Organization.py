@@ -1,11 +1,10 @@
-# Import Organization from orgs_involved.csv
-
+# Populate Organization Table from orgs_involved.csv
 import pymysql
 import csv
 from db_connect import *
 
-def import_csv():
-
+def import_Organization():
+    is_success = True
     insert_prefix = "INSERT INTO Organization (country_name, org_acronym, org_name, org_type) VALUES ("
 
     try:
@@ -40,17 +39,13 @@ def import_csv():
                         insert_stmt += "NULL" + ", "
 
             insert_stmt += ");"
-            run_insert(insert_stmt)
-                    
-                
-
-
-
-                
-
+            insert_status = run_insert(insert_stmt)
+            if insert_status is False:
+                is_success = False
+                return is_success
 
     except IOError as e:
-        print ('IO Error: ' + e.strerror)
+        is_success = False
+        print ('import_Organization Error: ' + e.strerror)
 
-if __name__ == '__main__':
-    import_csv()
+    return is_success

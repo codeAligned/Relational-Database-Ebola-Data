@@ -20,6 +20,7 @@ def destroy_connection(conn):
 
 
 def run_insert(insert_stmt):
+    is_success = True
     try:
         conn = create_connection()
         cur = conn.cursor()
@@ -29,8 +30,11 @@ def run_insert(insert_stmt):
 
     except pymysql.Error as error:
         print ("insert error: ", error)
+        is_success = False
+    return is_success
 
 def run_prep_stmt (stmt, param):
+    is_success = True
     try:
         conn = create_connection()
         cur = conn.cursor()
@@ -39,4 +43,6 @@ def run_prep_stmt (stmt, param):
         destroy_connection(conn)
 
     except pymysql.Error as error:
-        print "db_error: ", error
+        print ("insert error: ", error)
+        is_success = False
+    return is_success

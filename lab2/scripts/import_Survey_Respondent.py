@@ -1,10 +1,10 @@
-# import Survey_Respondent from data_survey.csv
-
+# Populate Survey_Respondent from data_survey.csv
 import pymysql
 import csv
 from db_connect import *
 
-def import_csv():
+def import_Survey_Respondent():
+    is_success = True
     insert_prefix = "INSERT INTO Survey_Respondent (country_name, respid, gender, age, education, corganizedae) VALUES ("
 
     try:
@@ -12,12 +12,11 @@ def import_csv():
         reader = csv.reader(csvfile)
 
         for i, row in enumerate(reader):
-            if i==0: continue                           # skip column names row      
+            if i==0: continue                               # skip column names row      
             insert_stmt = insert_prefix
             
             for j, val in enumerate(row):
                 if val:
-                
                     if j==0 or j==2:
                         insert_stmt += "'" + val + "', "
                     elif j==1 or j==3 or j==4:              # handles numeric types
@@ -30,15 +29,14 @@ def import_csv():
                     else:
                         insert_stmt += "NULL" + ", "
 
-                # print (j, val)
-                
-
             insert_stmt += ");"
-
-            run_insert(insert_stmt)
+            insert_status = run_insert(insert_stmt)
+            if insert_status is False:
+                is_success = False
+                return is_success
                 
     except IOError as e:
-        print ("IO Error: " + e.strerror)
+        is_success = False
+        print ("import Survey_Respondent Error: " + e.strerror)
 
-if __name__ == '__main__':
-    import_csv()
+    return is_success
