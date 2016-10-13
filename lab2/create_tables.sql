@@ -66,13 +66,12 @@ CREATE TABLE Survey_Respondent (
 );
 
 CREATE TABLE Organization (
-    org_name            VARCHAR(100)     NOT NULL,
-    -- country_name        VARCHAR(50)     NOT NULL,
-    -- etc_code            CHAR(8)         NOT NULL,
+    country_name        VARCHAR(50)     NOT NULL,
     org_acronym         VARCHAR(50),
-    org_type            VARCHAR(100),
-    PRIMARY KEY (org_name)                        
-    -- FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
+    org_name            VARCHAR(70)     NOT NULL,
+    org_type            VARCHAR(50),
+    PRIMARY KEY (org_name),
+    FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE ETC_Org (
