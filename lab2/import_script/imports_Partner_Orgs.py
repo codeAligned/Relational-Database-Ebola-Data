@@ -32,7 +32,6 @@ def import_csv():
 
 
             insert_stmt += ");"
-            print(insert_stmt)
                     
 
             run_insert(insert_stmt)
