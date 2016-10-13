@@ -53,12 +53,12 @@ CREATE TABLE Survey_Respondent (
 
 CREATE TABLE Organization (
     org_name            VARCHAR(100)     NOT NULL,
-    country_name        VARCHAR(50)     NOT NULL,
+    -- country_name        VARCHAR(50)     NOT NULL,
     -- etc_code            CHAR(8)         NOT NULL,
     org_acronym         VARCHAR(50),
     org_type            VARCHAR(100),
-    PRIMARY KEY (org_name),
-    FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
+    PRIMARY KEY (org_name)                        
+    -- FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
 CREATE TABLE ETC_Org (
@@ -70,5 +70,17 @@ CREATE TABLE ETC_Org (
         org_name
     ),
     FOREIGN KEY (etc_code) REFERENCES ETC (etc_code),
+    FOREIGN KEY (org_name) REFERENCES Organization (org_name)
+);
+
+CREATE TABLE Country_Org (
+    country_name        CHAR(50)        NOT NULL,
+    org_name            VARCHAR(100)     NOT NULL,
+    CONSTRAINT PK_Country_Org PRIMARY KEY
+    (
+        country_name,
+        org_name
+    ),
+    FOREIGN KEY (country_name) REFERENCES Country (country_name),
     FOREIGN KEY (org_name) REFERENCES Organization (org_name)
 );
