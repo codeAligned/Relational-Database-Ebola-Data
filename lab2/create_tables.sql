@@ -39,7 +39,7 @@ CREATE TABLE ETC (
 );
 
 CREATE TABLE Partner_Orgs (
-    partner_org         VARCHAR(50)  primary key,
+    partner_org         VARCHAR(50)  primary key
 );
 
 CREATE TABLE Partner_Org_ETC (
