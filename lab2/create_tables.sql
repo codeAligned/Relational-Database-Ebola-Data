@@ -38,10 +38,20 @@ CREATE TABLE ETC (
     FOREIGN KEY (country_name)  REFERENCES Country (country_name)    ON DELETE CASCADE
 );
 
-CREATE TABLE Partner_Org_ETC (
-    etc_code            CHAR(8),
+CREATE TABLE Partner_Orgs (
     partner_org         VARCHAR(50)  primary key,
-    FOREIGN KEY (etc_code)  REFERENCES ETC (etc_code)    ON DELETE CASCADE
+);
+
+CREATE TABLE Partner_Org_ETC (
+    etc_code            CHAR(8)         NOT NULL,
+    partner_org            VARCHAR(50)     NOT NULL,
+    CONSTRAINT PK_etc_code_partner_org PRIMARY KEY
+    (
+        etc_code,
+        partner_org
+    ),
+    FOREIGN KEY (etc_code) REFERENCES ETC (etc_code),
+    FOREIGN KEY (partner_org) REFERENCES Partner_Orgs (partner_org)
 );
 
 CREATE TABLE Survey_Respondent (
