@@ -1,12 +1,12 @@
 country_name,org_acronym,org_name,org_type
 Guinea,UNFPA,United Nations Population Fund,UN Agency
-Guinea,UNICEF,United Nations Children's Fund,UN Agency
+Guinea,UNICEF,United Nations Childrens Fund,UN Agency
 Guinea,CAFOD,Catholic Agency For Overseas Development,International NGO
 Guinea,CRG,Croix-Rouge Guin_e,Red Cross Movement
 Guinea,MoH,Ministry of Health,Goverment
 Guinea,WHO,World Health Organization,UN Agency
 Guinea,ACF-E,Action Contre la Faim Espagne,International NGO
-Guinea,Communaut_ de Sant'Egidio,Communaut_ de Sant'Egidio-DREAM,International NGO
+Guinea,Communaut_ de SantEgidio,Communaut_ de SantEgidio-DREAM,International NGO
 Guinea,EU,European Union,Donors
 Guinea,IFRC,International Federation Of Red Cross and Red Crescent Societies,Red Cross Movement
 Guinea,IP-D,Intitut Pasteur  de Dakar,Laboratory
@@ -31,7 +31,7 @@ Guinea,CRF,Croix Rouge frandaise,Red Cross Movement
 Guinea,France,France,Donors
 Guinea,IP-F,Institut Pasteur France,Laboratory
 Guinea,ALIMA,Alliance for International Medical Action,International NGO
-Liberia,Samaritan's Purse,Samaritan's Purse,International Organization
+Liberia,Samaritans Purse,Samaritans Purse,International Organization
 Liberia,CAI,Concern Aid international,International NGO
 Liberia,ZOA,ZOA International,International NGO
 Liberia,CRS,Catholic Relief Services,International NGO
@@ -125,7 +125,7 @@ Liberia,Tiyatien Health,Tiyatien Health,International NGO
 Liberia,UNDP,United Nations Development Programme,UN Agency
 Liberia,UNFPA,United Nations Population Fund,UN Agency
 Liberia,UNHCR,United Nations High Commissioner for Refugee,UN Agency
-Liberia,UNICEF,United Nations Children's Fund,UN Agency
+Liberia,UNICEF,United Nations Childrens Fund,UN Agency
 Liberia,UNMIL,United Nations Mission In Liberia,UN Agency
 Liberia,US Gvt,US Government,Donors
 Liberia,West Point Women,West Point Women,National NGO
@@ -133,14 +133,14 @@ Liberia,WHO,World Health Organization,UN Agency
 Liberia,Winrock,Winrock,International NGO
 Liberia,WOCAP,WOCAP,National NGO
 Liberia,WOCDAL,WOCDAL,National NGO
-Liberia,Women's Campaign International,Women's Campaign International,International Organization
+Liberia,Womens Campaign International,Womens Campaign International,International Organization
 Liberia,World Bank,World Bank,Donors
 Nigeria,MoH,Ministry of Health,Goverment
 Nigeria,WHO,World Health Organization,UN Agency
 Nigeria,CDC,US Center for Disease Control,Goverment
 Nigeria,MSF,Medecins sans Frontieres,International NGO
 Nigeria,NFELTP,Nigeria_Field Epidemiology and Laboratory Training Program,National Organization
-Nigeria,UNICEF,United Nations Children's Fund,UN Agency
+Nigeria,UNICEF,United Nations Childrens Fund,UN Agency
 Senegal,ACF,Action_Against Hunger,International Organization
 Senegal,ICRC,International Committee of the Red Cross,International NGO
 Senegal,Oxfam,Oxfam,International Organization
@@ -177,7 +177,7 @@ Liberia,Cuban FMT,Cuban Foreign Medical Team,National Organization
 Liberia,,Methodist Church,
 Sierra Leone,EMERGENCY,EMERGENCY,
 Sierra Leone,RSLAF,Republic of Sierra Leone Armed Forces,National Organization
-Sierra Leone,KINGS,King's Sierra Leone Partnership,
+Sierra Leone,KINGS,Kings Sierra Leone Partnership,
 Sierra Leone,PHE,Public Health England,National Organization
 Sierra Leone,MDM,Medecins du Monde,International NGO
 Sierra Leone,DTRA,Defense Threat Reduction Agency,
