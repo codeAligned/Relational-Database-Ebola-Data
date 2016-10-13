@@ -16,12 +16,18 @@ def import_csv():
             insert_stmt = insert_prefix
             
             for j, val in enumerate(row):
-                if j==0 or j==1 or j==2 or j==4 or j==7:
-                    insert_stmt += "'" + val + "', "
-                elif j==3 or j==5 or j==6:              # handles numeric types
-                    insert_stmt += val + ", "
-                else:                                   # handles last value
-                    insert_stmt += "'" + val + "'"
+                if val:
+                    if j==0 or j==1 or j==2 or j==4 or j==7:
+                        insert_stmt += "'" + val + "', "
+                    elif j==3 or j==5 or j==6:              # handles numeric types
+                        insert_stmt += val + ", "
+                    else:                                   # handles last value
+                        insert_stmt += "'" + val + "'"
+                else:
+                    if j == 8:
+                        insert_stmt += "NULL"
+                    else:
+                        insert_stmt += "Null" + ", "
             insert_stmt += ");"
 
             # print(insert_stmt)
@@ -30,5 +36,6 @@ def import_csv():
     except IOError as e:
         print ("IO Error: " + e.strerror)
 
-if __name__ == '__main__':
+def main():
     import_csv()
+main()

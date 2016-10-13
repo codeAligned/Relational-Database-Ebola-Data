@@ -27,7 +27,7 @@ CREATE TABLE Country (
 );
 
 CREATE TABLE ETC (
-    etc_code            CHAR(8)         NOT NULL,
+    etc_code            CHAR(8),
     country_name        VARCHAR(50)     NOT NULL,
     partner_org         VARCHAR(50),
     etc_name            VARCHAR(50)     NOT NULL,
