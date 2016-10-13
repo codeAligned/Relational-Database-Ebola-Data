@@ -10,7 +10,7 @@ Guinea,Communaut_ de SantEgidio,Communaut_ de SantEgidio-DREAM,International NGO
 Guinea,EU,European Union,Donors
 Guinea,IFRC,International Federation Of Red Cross and Red Crescent Societies,Red Cross Movement
 Guinea,IP-D,Intitut Pasteur  de Dakar,Laboratory
-Guinea,MSF,Medecins sans Frontieres,International NGO
+Guinea,MSF,MSF,International NGO
 Guinea,OCHA,Office for the Coordination of Humanitarian Affairs,UN Agency
 Guinea,OCPH,Organisation Catholique pour la Promotion Humaine,International NGO
 Guinea,Plan,PLAN,International Organization
@@ -36,14 +36,14 @@ Liberia,CAI,Concern Aid international,International NGO
 Liberia,ZOA,ZOA International,International NGO
 Liberia,CRS,Catholic Relief Services,International NGO
 Liberia,Making Change,Making Change,International Organization
-Liberia,MSF-CH,Medecins sans Frontieres Switzerland,International NGO
+Liberia,MSF-CH,MSF,International NGO
 Liberia,PLAN,PLAN,International Organization
 Liberia,WFP,World Food Programme,UN Agency
 Liberia,Living Water International,Living Water International,International Organization
 Liberia,ilab,iLab,National Organization
 Liberia,MoH,Ministry of Health,Goverment
-Liberia,MSF-BE,Medecins sans Frontieres Belgique,International NGO
-Liberia,MSF-FR,Medecins sans Frontieres France,International NGO
+Liberia,MSF-BE,MSF,International NGO
+Liberia,MSF-FR,MSF,International NGO
 Liberia,Irish Aid,Ireland Government,Donors
 Liberia,HHI,Heart to Heart International,International NGO
 Liberia,LIPO,Liberia Protection Organization ,National Organization
@@ -138,7 +138,7 @@ Liberia,World Bank,World Bank,Donors
 Nigeria,MoH,Ministry of Health,Goverment
 Nigeria,WHO,World Health Organization,UN Agency
 Nigeria,CDC,US Center for Disease Control,Goverment
-Nigeria,MSF,Medecins sans Frontieres,International NGO
+Nigeria,MSF,MSF,International NGO
 Nigeria,NFELTP,Nigeria_Field Epidemiology and Laboratory Training Program,National Organization
 Nigeria,UNICEF,United Nations Childrens Fund,UN Agency
 Senegal,ACF,Action_Against Hunger,International Organization
@@ -160,7 +160,7 @@ Guinea,WAHA,Women and Health Alliance International,International NGO
 Liberia,PAE,Pacific Architects and Engineers,Other
 Liberia,,Aspen,
 Liberia,IOM,Institute of Medicine,National NGO
-Liberia,MSB,MSB - Swedish Civil Contingencies Agency,National Organization
+Liberia,MSB,MSB,National Organization
 Liberia,,Partners in Health,National Organization
 Liberia,ARC,African Risk Capacity,National Organization
 Liberia,German RC,German RC,National Organization
@@ -168,7 +168,7 @@ Liberia,,German Armed Forces,National Organization
 Liberia,MBS Sweden,MBS Sweden,National Organization
 Liberia,Nimba CHT,Nimba Country Health Team,Other
 Liberia,PCI,Project Concern International,International NGO
-Liberia,MSF Brussels,Medecins Sans Frontifres Brussels,International NGO
+Liberia,MSF Brussels,MSF,International NGO
 Liberia,Chinese FMT,Chinese Foreign Medical Team,National Organization
 Liberia,,Firestone,Private
 Liberia,AU,African Union,

@@ -39,12 +39,12 @@ CREATE TABLE ETC (
 );
 
 CREATE TABLE Partner_Orgs (
-    partner_org         VARCHAR(50)  primary key
+    partner_org         VARCHAR(80)  primary key
 );
 
 CREATE TABLE Partner_Org_ETC (
     etc_code            CHAR(8)         NOT NULL,
-    partner_org            VARCHAR(50)     NOT NULL,
+    partner_org            VARCHAR(80)     NOT NULL,
     CONSTRAINT PK_etc_code_partner_org PRIMARY KEY
     (
         etc_code,
@@ -76,7 +76,7 @@ CREATE TABLE Organization (
 
 CREATE TABLE ETC_Org (
     etc_code            CHAR(8)         NOT NULL,
-    org_name            VARCHAR(50)     NOT NULL,
+    org_name            VARCHAR(80)     NOT NULL,
     CONSTRAINT PK_ETC_Org PRIMARY KEY
     (
         etc_code,
