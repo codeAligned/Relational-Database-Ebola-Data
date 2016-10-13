@@ -36,6 +36,6 @@ def import_Partner_Org_ETC():
 
     except IOError as e:
         is_success = False
-        print ("import_Partner_Org_ETC Error: " + e.strerror)
+        print ("import Partner_Org_ETC Error: " + e.strerror)
 
     return is_success

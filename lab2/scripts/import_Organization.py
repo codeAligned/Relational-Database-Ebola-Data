@@ -46,6 +46,6 @@ def import_Organization():
 
     except IOError as e:
         is_success = False
-        print ('import_Organization Error: ' + e.strerror)
+        print ('import Organization Error: ' + e.strerror)
 
     return is_success

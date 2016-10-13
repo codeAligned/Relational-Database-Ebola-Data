@@ -44,6 +44,6 @@ def import_ETC():
                 
     except IOError as e:
         is_success = False
-        print ("import_ETC Error: " + e.strerror)
+        print ("import ETC Error: " + e.strerror)
     
     return is_success

@@ -10,14 +10,9 @@ def rollback_Partner_Org_ETC():
         if insert_status is False:
             is_success = False
             return is_success
-        print(rollback_stmt)
                 
     except IOError as e:
         is_success = False
         print ("rollback Partner_Org_ETC Error: " + e.strerror)
 
     return is_success
-
-# def main():
-    # rollback_Partner_Org_ETC()
-# main()

@@ -31,6 +31,6 @@ def import_Country():
                 
     except IOError as e:
         is_success = False
-        print ("import_Country Error: " + e.strerror)
+        print ("import Country Error: " + e.strerror)
 
     return is_success

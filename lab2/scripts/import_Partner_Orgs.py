@@ -39,6 +39,6 @@ def import_Partner_Orgs():
                 
     except IOError as e:
         is_success = False
-        print ("import_Partner_Orgs Error: " + e.strerror)
+        print ("import Partner_Orgs Error: " + e.strerror)
 
     return is_success

@@ -13,6 +13,6 @@ def rollback_Country():
                 
     except IOError as e:
         is_success = False
-        print ("rollback_Country Error: " + e.strerror)
+        print ("rollback Country Error: " + e.strerror)
 
     return is_success

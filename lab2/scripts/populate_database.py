@@ -100,12 +100,12 @@ if is_success is True:
 else:
     print "import Organization: failed"
 
-# # populate Country_Org table
-# is_success = import_Country_Org()
-# if is_success is True:
-	# print "import_Country_Org: successful"
-# else:
-	# print "import_Country_Org: failed"
+# populate Country_Org table
+is_success = import_Country_Org()
+if is_success is True:
+    print "import_Country_Org: successful"
+else:
+    print "import_Country_Org: failed"
 
 # populate ETC_Org table
 is_success = import_ETC_Org()
