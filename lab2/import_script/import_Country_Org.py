@@ -28,7 +28,8 @@ def import_csv():
                     insert_stmt += "'" + val + "'"
             insert_stmt += ");"
 
-            # print(insert_stmt)
+            if i==1:
+                print(insert_stmt)
             run_insert(insert_stmt)
                 
     except IOError as e:

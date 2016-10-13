@@ -16,22 +16,24 @@ def import_csv():
             insert_stmt = insert_prefix
             
             for j, val in enumerate(row):
+                if val:
                 
-                if not val:
-                    insert_stmt += "'" + "NULL" + "', "
-
-                if j==0 or j==2:
-                    insert_stmt += "'" + val + "', "
-                elif j==1 or j==3 or j==4:              # handles numeric types
-                    insert_stmt += val + ", "
-                else:                                   # handles last/numeric value
-                    insert_stmt += val 
+                    if j==0 or j==2:
+                        insert_stmt += "'" + val + "', "
+                    elif j==1 or j==3 or j==4:              # handles numeric types
+                        insert_stmt += val + ", "
+                    else:                                   # handles last/numeric value
+                        insert_stmt += val
+                else:                                       # handles null
+                    if j == 5:
+                        insert_stmt += "NULL"
+                    else:
+                        insert_stmt += "NULL" + ", "
 
                 # print (j, val)
                 
 
             insert_stmt += ");"
-            # print(insert_stmt)
 
             run_insert(insert_stmt)
                 
