@@ -16,20 +16,20 @@ each of the separate import scripts). Make sure to include the latest version of
 be done to your existing lab2 folder.
 1. Create a new folder in your local git repository called lab3. All the work you do for this lab will go into this folder.
 2. Write some SQL queries to explore and analyze the data that is in your database. You must come up with 10 different select statements, of which at least 5 must take some user
-input. The collection of 10 queries must satisfy the following minimum criteria:  
-* 2 group bys with a having clause  
-* 2 aggregates (e.g. count, min, max, avg)  
-* 1 distinct  
-* 3 inner joins  
-* 2 outer joins  
-* 5 where clauses  
-* 5 order bys  
-* 5 views   
+   input. The collection of 10 queries must satisfy the following minimum criteria:    
+- 2 group bys with a having clause  
+- 2 aggregates (e.g. count, min, max, avg)  
+- 1 distinct  
+- 3 inner joins  
+- 2 outer joins  
+- 5 where clauses  
+- 5 order bys  
+- 5 views   
+Create a script called queries.sql with the above SQL queries. Make sure that each query is separated by a semi-colon so that the script can be run inside a SQL client
+  tool such as MySQL Workbench. Commit the script to your team's local repo and push the commit to your remote private repo on Github. For queries that require user-input, show an
+example of the query with example input inside of brackets. For example, select * from Instructor where instructor_type = [‘associate’] and status = [‘Active’]; 
+(Note that the queries won’t run when you add these brackets, but they should all run after we remove the brackets.)  
 
-Create a script called queries.sql with the above SQL queries. Make sure that each query is separated by a semi-colon so that the script can be run inside a SQL client tool such as
-MySQL Workbench. Commit the script to your team's local repo and push the commit to your remote private repo on Github. For queries that require user-input, show an example of the
-query with example input inside of brackets. For example, select * from Instructor where instructor_type = [‘associate’] and status = [‘Active’];(Note that the queries won’t run
-when you add these brackets, but they should all run after we remove the brackets.)  
 3. Develop a command-line interface in Python with 10 different menu options. The user selects an option from the menu and the appropriate select statement is run through Python
    with the results displayed to the user. The user can then choose another option or exit from the program. The menu options can all be at the same level or they can form a
 hierarchy. For example, you can have one top- level option with several sub-options and some of the sub-options may have their own options. The depth of the hierarchy is going to
@@ -44,8 +44,9 @@ without executing the SQL statement. Additionally, be sure to run all SQL querie
 dynamically generated strings (i.e. don’t use run_stmt() in db_connect.py). Commit your updates to query_interface.py and push the commit to your remote private repo on Github.
 5. Ensure that all the scripts for the query interface are in your lab3 folder on Github. Locate the last commit id that you are using for your submission and paste it into an
    email. Your email should also contain a link to your team's repo on Github. Address the email to the professor and both TAs and carbon copy your lab partner. The subject of the
-email should be: [CS327E][Lab3][<TeamName>], replacing <TeamName> with your actual team name. The email is due Tuesday, 11/15 at 11:59pm. If it's late, there will be a 10% grade
-reduction per late day. This late policy is also documented in the syllabus.  Note: only one member per team should send the submission email.
+email should be: [CS327E][Lab3][\<TeamName\>], replacing \<TeamName\> with your actual team name. The email is due Tuesday, 11/15 at 11:59pm. If it's late, there will be a 10% grade
+reduction per late day. This late policy is also documented in the syllabus.  
+Note: only one member per team should send the submission email.
 
 ## Coding Conventions:
 1. Place all reusable code in functions. For example, the database connection code should be defined in its own function because it’s used throughout the program. If you are using
