@@ -11,15 +11,15 @@
 ## Steps Outlined:
 0. Perform any reworks and/or enhancements to your Lab 2 submission that were noted in your graded rubric. For example, if a table didn’t get loaded correctly, fix the import script for this table before proceeding with the work for this lab. Additionally, ensure that we can populate your database by only having to set our MySQL database connection details and run your populate_database.py (or main.py) script. We should only have to set our MySQL connection details in one place (e.g. in the db_connect.py file, rather than in each of the separate import scripts). Make sure to include the latest version of your create_tables.sql file in the lab2 folder as well. All updates to the Lab 2 submission should be done to your existing lab2 folder.
 1. Create a new folder in your local git repository called lab3. All the work you do for this lab will go into this folder.
-2. Write some SQL queries to explore and analyze the data that is in your database. You must come up with 10 different select statements, of which at least 5 must take some user input. The collection of 10 queries must satisfy the following minimum criteria:
-    ● 2 group bys with a having clause
-    ● 2 aggregates (e.g. count, min, max, avg)
-    ● 1 distinct
-    ● 3 inner joins
-    ● 2 outer joins
-    ● 5 where clauses
-    ● 5 order bys
-    ● 5 views
+2. Write some SQL queries to explore and analyze the data that is in your database. You must come up with 10 different select statements, of which at least 5 must take some user input. The collection of 10 queries must satisfy the following minimum criteria:  
+    - 2 group bys with a having clause  
+    - 2 aggregates (e.g. count, min, max, avg)  
+    - 1 distinct  
+    - 3 inner joins  
+    - 2 outer joins  
+    - 5 where clauses  
+    - 5 order bys  
+    - 5 views  
 
 Create a script called queries.sql with the above SQL queries. Make sure that each query is separated by a semi-colon so that the script can be run inside a SQL client tool such as MySQL Workbench. Commit the script to your team's local repo and push the commit to your remote private repo on Github. For queries that require user-input, show an example of the query with example input inside of brackets. For example, select * from Instructor where instructor_type = [‘associate’] and status = [‘Active’];(Note that the queries won’t run when you add these brackets, but they should all run after we remove the brackets.)
 3. Develop a command-line interface in Python with 10 different menu options. The user selects an option from the menu and the appropriate select statement is run through Python with the results displayed to the user. The user can then choose another option or exit from the program. The menu options can all be at the same level or they can form a hierarchy. For example, you can have one top- level option with several sub-options and some of the sub-options may have their own options. The depth of the hierarchy is going to be dependent on the queries that you formulate. However, you must ensure that the menu hierarchy amounts to 10 different options and each option maps to one of the SQL queries from queries.sql. The select statements should be written in raw SQL and executed through the PyMySQL connector. The selects statement should access the base tables, views or both. You will want to eventually be using run_prepared_stmt() to execute all your queries through PyMySQL (see Step 4). Since it is sometimes easier to debug the select statement using run_stmt() in db_connect.py, you can start off by using this function and then convert to run_prepared_stmt() or alternatively you can go directly to run_prepared_stmt(). Name the Python program query_interface.py and add it to your repo. Commit the file to your local repo and then push the commit to your remote private repo Github.
