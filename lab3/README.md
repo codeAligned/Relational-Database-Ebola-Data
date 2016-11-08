@@ -25,7 +25,8 @@ input. The collection of 10 queries must satisfy the following minimum criteria:
     * 2 outer joins  
     * 5 where clauses  
     * 5 order bys  
-    * 5 views   Create a script called queries.sql with the above SQL queries. Make sure that each query is separated by a semi-colon so that the script can be run inside a SQL
+    * 5 views   
+Create a script called queries.sql with the above SQL queries. Make sure that each query is separated by a semi-colon so that the script can be run inside a SQL
       client tool such as MySQL Workbench. Commit the script to your team's local repo and push the commit to your remote private repo on Github. For queries that require
 user-input, show an example of the query with example input inside of brackets. For example, select * from Instructor where instructor_type = [‘associate’] and status = [‘Active’];
 (Note that the queries won’t run when you add these brackets, but they should all run after we remove the brackets.)  
