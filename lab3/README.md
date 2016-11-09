@@ -28,29 +28,28 @@ submission should be done to your existing lab2 folder.
    database. You must come up with 10 different select statements, of which at
 least 5 must take some user input. The collection of 10 queries must satisfy the
 following minimum criteria:
-* 2 group bys with a having clause
-* 2 aggregates (e.g. count, min, max, sum, avg)
-* 1 distinct
-* 3 inner joins
-* 2 outer joins
-* 5 where clauses
-* 5 order bys
+   * 2 group bys with a having clause
+   * 2 aggregates (e.g. count, min, max, sum, avg)
+   * 1 distinct
+   * 3 inner joins
+   * 2 outer joins
+   * 5 where clauses
+   * 5 order bys
 
-In addition to the 10 select statements, you must come up with:    
+   In addition to the 10 select statements, you must come up with:    
+   * 2 create views
+   * 5 queries using your views
 
-* 2 create views
-* 5 queries using your views
+   Create a script called queries.sql with the above SQL queries and views. Make
+   sure that each statement is separated by a semi-colon so that the script can be
+   run inside a SQL client tool such as MySQL Workbench. Commit the script to your
+   team's local repo and push the commit to your remote private repo on Github. For
+   queries that require user input, show the query with example input inside of
+   brackets. For example, select * from Instructor where instructor_type =
+   [‘associate’] and status = [‘Active’] order by [last_name];
 
-Create a script called queries.sql with the above SQL queries and views. Make
-sure that each statement is separated by a semi-colon so that the script can be
-run inside a SQL client tool such as MySQL Workbench. Commit the script to your
-team's local repo and push the commit to your remote private repo on Github. For
-queries that require user input, show the query with example input inside of
-brackets. For example, select * from Instructor where instructor_type =
-[‘associate’] and status = [‘Active’] order by [last_name];
-
-(Note that the queries won’t run when you add these brackets, but they should
-all run after we remove the brackets).
+   (Note that the queries won’t run when you add these brackets, but they should
+   all run after we remove the brackets).
 
 3. Develop a command-line interface in Python with 10 different menu options.
    The user selects an option from the menu and the appropriate select statement
