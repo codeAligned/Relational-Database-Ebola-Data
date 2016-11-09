@@ -120,6 +120,8 @@ exit the program.
 4. We expect each team to use the Github Issue Tracker: opening tasks, assigning
    them, and tracking their status. We will be reviewing the Issue Tracker to
 ensure that both team members are contributing equally to the project.
-Resources:  Lab 3 Grading Rubric:     http://tinyurl.com/zxzsuef Lab 3 Team
-Sign-up Sheet: http://tinyurl.com/j6hzgvw Code Samples:
-https://github.com/cs327e-fall2016/snippets
+
+##Resources:  
+Lab 3 Grading Rubric:     http://tinyurl.com/zxzsuef   
+Lab 3 Team Sign-up Sheet: http://tinyurl.com/j6hzgvw   
+Code Samples:             https://github.com/cs327e-fall2016/snippets
