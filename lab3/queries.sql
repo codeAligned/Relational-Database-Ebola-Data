@@ -1,10 +1,20 @@
 -- SQL Queries
 
--- VIEWS
-create view SurveyResp_Country (gender, age, education, country_name) as select gender, age, education, country_name from Survey_Respondent;
+-------------------------- VIEWS --------------------------
+-- create view from Survey_Respondent of gender, age, education, country_name
+-- of survey respondents
+CREATE VIEW SurveyResp_Country (gender, age, education, country_name) 
+AS SELECT gender, age, education, country_name 
+FROM Survey_Respondent;
 
 
---------------------------------------------------------------
+-- create view from ETC and Partner_Orgs of etc_name, country_name, partner_org
+CREATE VIEW ETC_limited (etc_name, country_name, partner_org) 
+AS SELECT etc_name, country_name, partner_org 
+FROM ETC, Partner_Orgs;
+
+
+------------------------- QUERIES -------------------------
 
 -- show ETCs in a selected country that have greater than a selected number of open beds
 SELECT * FROM ETC 
