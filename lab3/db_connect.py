@@ -25,9 +25,31 @@ def run_insert(insert_stmt):
         conn = create_connection()
         cur = conn.cursor()
         cur.execute(insert_stmt)
-        result = cur.fetchall()
-        for row in result:
-            print row
+        results = cur.fetchall()
+
+        widths = []
+        columns = []
+        tavnit = '|'
+        separator = '+' 
+
+        for cd in cur.description:
+            widths.append(14 + max(cd[2], len(cd[0])))
+            columns.append(cd[0])
+
+        for w in widths:
+            tavnit += " %-"+"%ss |" % (w,)
+            separator += '-'*w + '--+'
+
+        print(separator)
+        print(tavnit % tuple(columns))
+        print(separator)
+        for row in results:
+            print(tavnit % row)
+        print(separator)
+
+
+        # for row in result:
+            # print row
         conn.commit()
         destroy_connection(conn)
 
