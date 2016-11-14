@@ -25,6 +25,9 @@ def run_insert(insert_stmt):
         conn = create_connection()
         cur = conn.cursor()
         cur.execute(insert_stmt)
+        result = cur.fetchall()
+        for row in result:
+            print row
         conn.commit()
         destroy_connection(conn)
 
