@@ -1,6 +1,7 @@
 -- SQL Create Views and Queries for Ebola Database
 
--------------------------- VIEWS --------------------------
+---------------------- CREATE VIEWS ----------------------
+
 -- create view from Survey_Respondent of gender, age, education, country_name
 -- of survey respondents
 CREATE VIEW SurveyResp_Country (gender, age, education, country_name) 
@@ -52,6 +53,11 @@ FROM Country_Org INNER JOIN ETC
 WHERE org_name = ['UNMEER']
 ORDER BY etc_code;
 
+-- show distinct organization types from Organization
+SELECT DISTINCT org_type 
+FROM Organization;
+
+
 --------------------- QUERIES BY VIEWS ---------------------
 
 -- show surveyresp_country, ordered by increasing age of survey respondents
@@ -71,3 +77,16 @@ FROM etc_limited INNER JOIN country
 WHERE partner_org = ['World Health Organization']
 ORDER BY country.country_name;
 
+-- show average age of selected gender of survey respondents
+-- from surveyresp_country
+SELECT gender, AVG(age) AS average_age 
+FROM surveyresp_country 
+GROUP BY gender 
+HAVING gender = ['F'];
+
+-- show average education level of selected gender of survey respondents
+-- from surveyresp_country
+SELECT gender, AVG(education) AS average_education
+FROM surveyresp_country
+GROUP BY gender
+HAVING gender = ['M'];
