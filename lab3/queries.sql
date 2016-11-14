@@ -16,11 +16,13 @@ FROM ETC, Partner_Orgs;
 
 ------------------------- QUERIES -------------------------
 
--- show ETCs in a selected country that have greater than a selected number of open beds
+-- show ETCs in a selected country that have greater than 
+-- a selected number of open beds, ordered by open_beds
 SELECT * 
 FROM ETC 
 WHERE country_name = ['Guinea'] 
-HAVING beds_open > [50];
+HAVING beds_open > [50]
+ORDER BY beds_open;
 
 -- show average age and average education level of a selected gender population
 -- in a selected country
@@ -43,11 +45,12 @@ SELECT partner_org, latitude, longitude
 FROM Partner_orgs INNER JOIN ETC 
 WHERE (latitude != 0 OR longitude != 0);
 
--- show ETCs by etc_code that selected Organization is working with
+-- show ETCs by etc_code that selected Organization is working with, 
+-- ordered by etc_code
 SELECT org_name, etc_code  
 FROM Country_Org INNER JOIN ETC 
-WHERE org_name = ['UNMEER'];
-
+WHERE org_name = ['UNMEER']
+ORDER BY etc_code;
 
 --------------------- QUERIES BY VIEWS ---------------------
 
@@ -56,4 +59,15 @@ SELECT *
 FROM surveyresp_country 
 ORDER BY age;
 
+-- show etc_name and partner_org from etc_limited, ordered by etc_names
+SELECT etc_name, partner_org 
+FROM etc_limited 
+ORDER BY etc_name;
+
+-- show etc_name, partner_org, country_name, and gdp_cap
+-- for selected  partner_org, ordered by country_name
+SELECT etc_name, partner_org, country.country_name, gdp_cap  
+FROM etc_limited INNER JOIN country 
+WHERE partner_org = ['World Health Organization']
+ORDER BY country.country_name;
 
