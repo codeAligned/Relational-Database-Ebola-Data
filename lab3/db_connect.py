@@ -39,7 +39,7 @@ def run_insert(insert_stmt):
         separator = '+' 
 
         for cd in cur.description:
-            widths.append(10+max(cd[2], len(cd[0])))
+            widths.append(max(cd[2], len(cd[0])))
             columns.append(cd[0])
 
         for w in widths:
