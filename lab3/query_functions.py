@@ -16,23 +16,27 @@ def age_edu_sex_country(): # user input on gender, country
     run_insert(stmt)
 
 def count_sex_educ(): # user input on education, gender
-    stmt = 'SELECT COUNT(education) as selected_educ_or_higher FROM survey_respondent WHERE education >= 6 AND GENDER = \'F\';'
+    education = raw_input('Enter minimum education level (0-8): ')
+    gender = raw_input('Enter gender (M/F): ')
+    stmt = "SELECT COUNT(education) as selected_educ_or_higher FROM survey_respondent WHERE education >= " + education + " AND GENDER = '" + gender + "';"
     run_insert(stmt)
 
 def partner_lat_long():
     stmt = 'SELECT partner_org, latitude, longitude FROM Partner_orgs INNER JOIN ETC WHERE (latitude != 0 OR longitude != 0);'
     run_insert(stmt)
 
-def org_ETC_codes(): # needs user input on org_name
-    stmt = 'SELECT org_name, etc_code FROM Country_Org INNER JOIN ETC WHERE org_name = \'UNMEER\' ORDER BY etc_code;'
+def org_ETC_codes(): # user input on org_name
+    org_name = raw_input('Enter organization name: ')
+    stmt = "SELECT org_name, etc_code FROM Country_Org INNER JOIN ETC WHERE org_name = '" + org_name + "' ORDER BY etc_code;"
     run_insert(stmt)
 
 def distinct_org_types():
     stmt = 'SELECT DISTINCT org_type FROM Organization;'
     run_insert(stmt)
 
-def respondent_country_info(): # needs user input on gender
-    stmt = 'SELECT * FROM Country LEFT OUTER JOIN Survey_Respondent on Country.country_name = Survey_Respondent.country_name WHERE gender = \'M\';'
+def respondent_country_info(): # user input on gender
+    gender = raw_input('Enter gender (M/F): ')
+    stmt = "SELECT * FROM Country LEFT OUTER JOIN Survey_Respondent on Country.country_name = Survey_Respondent.country_name WHERE gender = '" + gender + "';"
     run_insert(stmt)
 
 def non_closed_ETC_partner():
@@ -43,8 +47,12 @@ def country_gdp():
     stmt = 'SELECT * FROM Country ORDER BY gdp_cap;'
     run_insert(stmt)
 
-def count_organized(): # needs used input for gender, educ, countryName
-    stmt = 'SELECT COUNT(corganizedae) as count_organized FROM Survey_Respondent WHERE gender = \'M\' AND corganizedae = 1 AND education >= 3 AND country_name = \'Liberia\';'
+def count_organized(): # user input for gender, educ, countryName
+    gender = raw_input('Enter gender (M/F): ')
+    education = raw_input('Enter minimum education level (0-8): ')
+    country_name = raw_input('Enter country name: ')
+    stmt = "SELECT COUNT(corganizedae) as count_organized FROM Survey_Respondent WHERE gender = '" + gender + "' AND corganizedae = 1 AND education >= " + education + " AND country_name = '" +
+    country_name + "';"
     run_insert(stmt)
 
 
@@ -57,7 +65,7 @@ def etc_limited_byName():
     stmt = 'SELECT etc_name, partner_org FROM etc_limited ORDER BY etc_name;'
     run_insert(stmt)
 
-def partner_org_limited_byCountry(): # needs user input for partner_org
+def partner_org_limited_byCountry(): # user input for partner_org
     stmt = 'SELECT etc_name, partner_org, country.country_name, gdp_cap FROM etc_limited INNER JOIN country WHERE partner_org = \'World Health Organization\' ORDER BY country.country_name;'
     run_insert(stmt)
 
