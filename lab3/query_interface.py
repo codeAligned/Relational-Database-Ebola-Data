@@ -27,7 +27,7 @@ def run_another():
         print_menu()
         run_query_case()
     else:
-        print('Goodbye.')
+        print("Goodbye. Don't forget to wash your hands!")
 
 def run_query_case():
     case = int(input('Enter query option number: '))
@@ -79,10 +79,6 @@ def run_query_case():
     else:
         print("Sorry, that is not an option.")
         run_another()
-
-
-# run_insert error checking
-# ...
 
 
 def main():
