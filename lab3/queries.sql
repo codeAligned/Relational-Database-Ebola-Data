@@ -57,6 +57,35 @@ ORDER BY etc_code;
 SELECT DISTINCT org_type 
 FROM Organization;
 
+-- joins country and respondent tables; makes a row for every respondent
+-- including their personal info and their home country's info
+SELECT * FROM Country 
+LEFT OUTER JOIN Survey_Respondent 
+on Country.country_name = Survey_Respondent.country_name 
+WHERE gender = ['M'];
+
+-- joins ETC and Partner_org_ETC tables; makes a row for each ETC
+-- displays ETC's info and its partner organization 
+SELECT * FROM ETC 
+LEFT OUTER JOIN Partner_org_ETC 
+on ETC.etc_code=Partner_org_ETC.etc_code 
+WHERE status='Open' or status='Under Construction';
+
+-- orders countries by gdp, ascending
+SELECT * FROM Country
+ORDER BY gdp_cap;
+
+-- counts the number of respondents who felt their community was organized
+-- based on gender, education, and country
+SELECT COUNT(corganizedae) as count_organized
+FROM Survey_Respondent
+WHERE gender = ['M']
+AND corganizedae = 1
+AND education >= [3]
+AND country_name = ['Liberia'];
+
+
+
 
 --------------------- QUERIES BY VIEWS ---------------------
 
