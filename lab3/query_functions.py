@@ -51,8 +51,7 @@ def count_organized(): # user input for gender, educ, countryName
     gender = raw_input('Enter gender (M/F): ')
     education = raw_input('Enter minimum education level (0-8): ')
     country_name = raw_input('Enter country name: ')
-    stmt = "SELECT COUNT(corganizedae) as count_organized FROM Survey_Respondent WHERE gender = '" + gender + "' AND corganizedae = 1 AND education >= " + education + " AND country_name = '" +
-    country_name + "';"
+    stmt = "SELECT COUNT(corganizedae) as count_organized FROM Survey_Respondent WHERE gender = '" + gender + "' AND corganizedae = 1 AND education >= " + education + " AND country_name = '" + country_name + "';"
     run_insert(stmt)
 
 
@@ -66,17 +65,19 @@ def etc_limited_byName():
     run_insert(stmt)
 
 def partner_org_limited_byCountry(): # user input for partner_org
-    stmt = 'SELECT etc_name, partner_org, country.country_name, gdp_cap FROM etc_limited INNER JOIN country WHERE partner_org = \'World Health Organization\' ORDER BY country.country_name;'
+    partner_org = raw_input('Enter partner organization\'s name: ')
+    stmt = "SELECT etc_name, partner_org, country.country_name, gdp_cap FROM etc_limited INNER JOIN country WHERE partner_org = '" + partner_org + "' ORDER BY country.country_name;"
     run_insert(stmt)
 
-def avg_age_resp(): # needs user input for gender
-    stmt = 'SELECT gender, AVG(age) AS average_age FROM surveyresp_country GROUP BY gender HAVING gender = \'F\';'
+def avg_age_resp(): # user input for gender
+    gender = raw_input('Enter gender (M/F): ')
+    stmt = "SELECT gender, AVG(age) AS average_age FROM surveyresp_country GROUP BY gender HAVING gender = '" + gender + "';"
     run_insert(stmt)
 
-def avg_edu_resp(): # needs user input for gender
-    stmt = 'SELECT gender, AVG(education) AS average_education FROM surveyresp_country GROUP BY gender HAVING gender = \'M\';'
+def avg_edu_resp(): # user input for gender
+    gender = raw_input('Enter gender (M/F): ')
+    stmt = "SELECT gender, AVG(education) AS average_education FROM surveyresp_country GROUP BY gender HAVING gender = '" + gender + "';"
     run_insert(stmt)
-
 
 
 # Functions to create views
