@@ -5,21 +5,21 @@ from query_functions import *
 
 def print_menu():
     print ('\nQuery options:')
-    print ('1:  List ETCs in the country __ having more than __ open beds.')
-    print ('2:  List average age & education of respondents whose sex=__ and live in __.')
-    print ('3:  Count the respondents whose sex=__ and who have at least an education of __.')
-    print ('4:  Display partner organizations with their longitude/latitude coordinates.')
-    print ('5:  Display a chosen organization __ & codes of the ETCs it is working with.')
-    print ('6:  Display all distinct organization types.')
-    print ('7:  Display every respondent\'s (whose sex=__) info & their country\'s info.')
-    print ('8:  Display every ETC that isn\'t closed & its info/partner organization.')
+    print ('1:  List ETCs in a country having a minimum number of open beds.')
+    print ('2:  List average age & education of respondents in a country, by gender.')
+    print ('3:  Count number of respondents with a minimum education level, by gender.')
+    print ('4:  List partner orgs with longitude/latitude coordinates.')
+    print ('5:  List ETC codes affiliated with an organization.')
+    print ('6:  List all distinct organization types.')
+    print ('7:  List respondent\'s info & country of origin, by gender.')
+    print ('8:  List open ETCs and partner orgs.')
     print ('9:  List countries in ascending order by GDP.')
-    print ('10: Count the respondents (with sex=__, education>=__, and country=__) who think their community was well organized.')
-    print ('11: Show gender, age, education, and country of survey respondents ordered by age.')
-    print ('12: Show ETC names and Partner Orgs ordered by ETC names.')
-    print ('13: Show ETC name, Selected Partner Org, and Country GDP ordered by Country.')
-    print ('14: Show average age of selected gender of survey respondents.')
-    print ('15: Show average educaiton level of selected gender of survey respondents.\n')
+    print ('10: Count respondents who think their community was well organized, by gender, education level, and country.')
+    print ('11: List survey respondents with non-identifying info, ordered by age.')
+    print ('12: List ETC names with Partner Orgs, ordered by ETC names.')
+    print ('13: List ETC name and Country GDP of an organization, ordered by Country.')
+    print ('14: List average age of survey respondents, by gender.')
+    print ('15: List average education level of survey respondents, by gender.\n')
 
 def run_another():
     opt = raw_input('Run another query? (y/n): ')
@@ -30,7 +30,14 @@ def run_another():
         print("Goodbye. Don't forget to wash your hands!")
 
 def run_query_case():
-    case = int(input('Enter query option number: '))
+    case = raw_input('Enter query option number: ')
+    try:
+        case = int (case)
+    except ValueError:
+        print('This is not a valid option.')
+        run_another()
+        return 
+
     if (case == 1):
         etc_open_beds()
         run_another()
@@ -77,7 +84,7 @@ def run_query_case():
         avg_edu_resp()
         run_another()
     else:
-        print("Sorry, that is not an option.")
+        print('This is not a valid option.')
         run_another()
 
 
