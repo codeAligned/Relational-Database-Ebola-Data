@@ -59,7 +59,6 @@ a string, check that it doesn’t contain the following substrings:
     from”   
     “or1=1”.    
     ~~~~~
-
 If any of these “bad” substrings are found in the user input, print out an appropriate error message
 without executing the SQL statement. Commit your updates to extended_query_interface.py and push the commit to your
 remote repo on Github.
@@ -70,7 +69,6 @@ remote repo on Github.
     ~~~~~{.sh}
     mysqldump -u root -p your_db_name > backup.sql 
     ~~~~~
-
 where your_db_name = the name of your MySQL database.  Below is a
 screenshot of running mysqldump to backup the utexas database: 
 ![image of mysqldump example](./mysqldump.png)
