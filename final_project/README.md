@@ -63,11 +63,17 @@ a string, check that it doesn’t contain the following substrings:
 If any of these “bad” substrings are found in the user input, print out an appropriate error message
 without executing the SQL statement. Commit your updates to extended_query_interface.py and push the commit to your
 remote repo on Github.
+
 6. Create a backup of your MySQL database using the mysqldump utility. This program comes with MySQL server and it is
    located in the bin directory of the MySQL server installation. Use the following command to take the backup: 
-mysqldump -u root -p your_db_name > backup.sql where your_db_name = the name of your MySQL database.  Below is a
+
+    ~~~~~{.sh}
+    mysqldump -u root -p your_db_name > backup.sql 
+    ~~~~~
+
+where your_db_name = the name of your MySQL database.  Below is a
 screenshot of running mysqldump to backup the utexas database: 
-!(mysqldump.png)
+![image of mysqldump example](./mysqldump.png)
 Note that backup.sql is the backup file that is generated
 from running the command. Once you have taken the backup, add it to your repo, commit the file, and then push the commit
 to your remote repo on Github. You must ensure that the backup represents your latest database. If you make a change to
@@ -89,31 +95,42 @@ the email to the professor and both TAs and carbon copy your lab partner. The su
 syllabus. Note: only one member per team should send the submission email.  
 
 ## Coding Conventions:
+
 1. Place all reusable code in functions. For example, the database connection code should be defined in its own function
    because it’s used throughout the program. If you are using db_connect.py, note that we have made some enhancements to
 it, so be sure to pull the latest version from Github. 
 
- 2. Use basic error handling with try-except blocks. Catch only the errors that you can handle and exit the program when an error is fatal (e.g. missing input data file, invalid database connection, etc). Use print statements in the except block to report the error regardless of whether you choose to continue or exit the program.
-Writing Conventions:
-The report is a substantial component of this final project. It is critical that you give yourselves enough time to write a report that is coherent, concise, organized, readable, and clear. Imagine that you are writing this for a prospective employer who has a strong database background and would like to learn about your project without reading every line of code you have written.
-If you are not familiar with technical report writing, please consult the following reference: P. Valduriez, Some Hints to Improve Writing of Technical Papers, 1994.
+2. Use basic error handling with try-except blocks. Catch only the errors that you can handle and exit the program when
+   an error is fatal (e.g. missing input data file, invalid database connection, etc). Use print statements in the
+except block to report the error regardless of whether you choose to continue or exit the program.
+
+## Writing Conventions:
+
+The report is a substantial component of this final project. It is critical that you give yourselves enough time to
+write a report that is coherent, concise, organized, readable, and clear. Imagine that you are writing this for a
+prospective employer who has a strong database background and would like to learn about your project without reading
+every line of code you have written.  If you are not familiar with technical report writing, please consult the
+following reference: P. Valduriez, Some Hints to Improve Writing of Technical Papers, 1994.
 
 ## Teamwork & Collaboration:
+
 1. We will have only 2 class meetings to work on the final project (11/28 and 11/30).
 2. We expect each team to split up the work as evenly as possible between the two members.
-3. We expect each team to make several commits throughout this project. We don’t want to see a single giant commit before the assignment is turned in!
-4. We expect each team to use the Github Issue Tracker: opening tasks, assigning them, and tracking their status. We will be reviewing the Issue Tracker to ensure that both team members are contributing equally to the project.
+3. We expect each team to make several commits throughout this project. We don’t want to see a single giant commit
+   before the assignment is turned in!
+4. We expect each team to use the Github Issue Tracker: opening tasks, assigning them, and tracking their status. We
+   will be reviewing the Issue Tracker to ensure that both team members are contributing equally to the project.
   
 ## Resources:
 ### Final Project:
-[1] Setup Steps: http://tinyurl.com/z7kruxl
-[2] Grading Rubric: http://tinyurl.com/j5ot5w9
-[3] Team Sign-up Sheet: http://tinyurl.com/j6hzgvw
+[1] Setup Steps: http://tinyurl.com/z7kruxl  
+[2] Grading Rubric: http://tinyurl.com/j5ot5w9  
+[3] Team Sign-up Sheet: http://tinyurl.com/j6hzgvw  
 
 ### Twitter:
-[4] Twitter API Field Guide: https://dev.twitter.com/overview/api/tweets [5] Twitter Search API: https://dev.twitter.com/rest/public/search
+[4] Twitter API Field Guide: https://dev.twitter.com/overview/api/tweets [5] Twitter Search API: https://dev.twitter.com/rest/public/search  
 
 ### JSON:
-[6] JSON Code Samples: https://github.com/cs327e-fall2016/snippets (e.g. twitter_client.py, extend_utexas.sql, and analyze_tweets.sql).
-[7] JSON Path Online Evaluator: http://jsonpath.com
-[8] JSON Editor Online: http://jsoneditoronline.org
+[6] JSON Code Samples: https://github.com/cs327e-fall2016/snippets (e.g. twitter_client.py, extend_utexas.sql, and analyze_tweets.sql).  
+[7] JSON Path Online Evaluator: http://jsonpath.com  
+[8] JSON Editor Online: http://jsoneditoronline.org  
