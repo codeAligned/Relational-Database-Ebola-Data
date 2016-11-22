@@ -107,7 +107,9 @@ The report is a substantial component of this final project. It is critical that
 write a report that is coherent, concise, organized, readable, and clear. Imagine that you are writing this for a
 prospective employer who has a strong database background and would like to learn about your project without reading
 every line of code you have written.  If you are not familiar with technical report writing, please consult the
-following reference: P. Valduriez, Some Hints to Improve Writing of Technical Papers, 1994.
+following reference: 
+[P. Valduriez, Some Hints to Improve Writing of Technical Papers,
+1994.](http://www.cs.utexas.edu/~scohen/project/writing-hints.pdf)
 
 ## Teamwork & Collaboration:
 
