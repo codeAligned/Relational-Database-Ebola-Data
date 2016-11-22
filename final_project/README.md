@@ -121,14 +121,15 @@ following reference: P. Valduriez, Some Hints to Improve Writing of Technical Pa
   
 ## Resources:
 ### Final Project:
-[1] Setup Steps: http://tinyurl.com/z7kruxl  
-[2] Grading Rubric: http://tinyurl.com/j5ot5w9  
-[3] Team Sign-up Sheet: http://tinyurl.com/j6hzgvw  
+[1] Setup Steps: http://tinyurl.com/z7kruxl    
+[2] Grading Rubric: http://tinyurl.com/j5ot5w9    
+[3] Team Sign-up Sheet: http://tinyurl.com/j6hzgvw    
 
 ### Twitter:
-[4] Twitter API Field Guide: https://dev.twitter.com/overview/api/tweets [5] Twitter Search API: https://dev.twitter.com/rest/public/search  
+[4] Twitter API Field Guide: https://dev.twitter.com/overview/api/tweets   
+[5] Twitter Search API: https://dev.twitter.com/rest/public/search    
 
 ### JSON:
-[6] JSON Code Samples: https://github.com/cs327e-fall2016/snippets (e.g. twitter_client.py, extend_utexas.sql, and analyze_tweets.sql).  
-[7] JSON Path Online Evaluator: http://jsonpath.com  
-[8] JSON Editor Online: http://jsoneditoronline.org  
+[6] JSON Code Samples: https://github.com/cs327e-fall2016/snippets (e.g. twitter_client.py, extend_utexas.sql, and analyze_tweets.sql).    
+[7] JSON Path Online Evaluator: http://jsonpath.com    
+[8] JSON Editor Online: http://jsoneditoronline.org    
