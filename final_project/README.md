@@ -55,9 +55,8 @@ a string, check that it doesn’t contain the following substrings:
     ~~~~~{.sql}  
     “; drop table”,   
     “; truncate table”   
-    “; delete  
-    from”   
-    “or1=1”.    
+    “; delete from”   
+    “or 1=1”.    
     ~~~~~
 If any of these “bad” substrings are found in the user input, print out an appropriate error message
 without executing the SQL statement. Commit your updates to extended_query_interface.py and push the commit to your
