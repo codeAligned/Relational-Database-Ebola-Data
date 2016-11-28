@@ -5,84 +5,58 @@ Created on Tue Nov 22 13:01:03 2016
 
 @author: juliannecrea
 """
-
-import pymysql
 import json
-import os
 import tweepy
 from db_connect import *
 
-def twitter_connect():
-    API_KEY = 'bOondRoF63msjOZn2MBltACwk'
-    API_SECRET = 'bQSHowUX8L2oQNvD3xzIpQzqhkdvrd7JCb20gC5iwn2KTSByjV'
-    TOKEN_KEY = '728312577080451072-8PeNy9HzQuSjgm7JZsUt3obZ1fpZS3c'
-    TOKEN_SECRET = 'Rmk3FcMEO1tCEjTgedGtRMCGjzvQnWrP182ulaY1hmNVB'
-    auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
-    auth.set_access_token(TOKEN_KEY, TOKEN_SECRET)
-    api = tweepy.API(auth)
-    return api
+# Our real keys and tokens
+API_KEY = 'bOondRoF63msjOZn2MBltACwk'
+API_SECRET = 'bQSHowUX8L2oQNvD3xzIpQzqhkdvrd7JCb20gC5iwn2KTSByjV'
+TOKEN_KEY = '728312577080451072-8PeNy9HzQuSjgm7JZsUt3obZ1fpZS3c'
+TOKEN_SECRET = 'Rmk3FcMEO1tCEjTgedGtRMCGjzvQnWrP182ulaY1hmNVB'
 
-def class_search_insert(api, unique):
+def get_api_instance():
+  auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+  auth.set_access_token(TOKEN_KEY, TOKEN_SECRET)
+  api_inst = tweepy.API(auth)
+  return api_inst
 
-    try:
-        connection = create_connection()
-        dbcursor = connection.cursor()
-        stmt = "SELECT name FROM Class WHERE unique_number = %s"
-        run_prepared_stmt(dbcursor, stmt, (unique))
-        keyword = dbcursor.fetchone()[0]
-        apicursor = tweepy.Cursor(api.search, q=keyword, lang='en')
+  
+  
+  
+def do_data_pull(api_inst):
 
-        for item in apicursor.pages().next():
-            stmt = "INSERT into ClassTweet (unique_num, tweet) VALUES (%s, %s)"
-            run_prepared_stmt(dbcursor, stmt, (unique, json.dumps(item._json)))
-        do_commit(connection)
-    except pymysql.Error as e:
-        print ("Error: " + e.args[0])
+  sql_query = "select country_name, health_exp, gdp_cap, urban_pop from Country order by country_name"
 
-def update_all_JS(path, value):
+  try: 
+    conn = create_connection()
+    db_cursor = conn.cursor()
+    query_status = run_stmt(db_cursor, sql_query)
+    resultset = db_cursor.fetchall()
 
-    try:
-        connection = create_connection()
-        cursor = connection.cursor()
+    for record in resultset:
+      country_name = record[0]
+      health_exp = record[1]
+      gdp_cap = record[2]
+      urban_pop = record[3]
 
-        stmt = "UPDATE ClassTweet SET tweet = JSON_INSERT(tweet, %s, %s)"
-        run_prepared_stmt(cursor, stmt, (path, value))
-        do_commit(connection)
-    except pymysql.Error as e:
-        print ("Error: " + e.args[1])
+      ebola_query = "(#Ebola) AND "
+      twitter_query = ebola_query + "'" + country_name + "'"
+      print "twitter_query: " + twitter_query
+      twitter_cursor = tweepy.Cursor(api_inst.search, q=twitter_query, lang="en")
 
-def search_keyword(key):
-    try:
-        connection = create_connection()
-        cursor = connection.cursor()
+      for page in twitter_cursor.pages():
+        for item in page:
+          json_str = json.dumps(item._json)
+          print "found a " + country_name + " tweet"
+          insert_stmt = "insert into Tweet(tweet_doc, country_name) values(%s, %s)"
+          run_prepared_stmt(db_cursor, insert_stmt, (json_str, country_name))
+          do_commit(conn)
 
-        stmt = "SELECT tweet->\"$.text\" from ClassTweet where tweet->\"$.text\" LIKE %s"
-        run_prepared_stmt(cursor, stmt, ("%"+key+"%"))
+  except pymysql.Error as error:
+    is_success = False
+    print "do_data_pull: " + e.strerror
 
-        for row in cursor:
-            print (row[0])
-    except pymysql.Error as e:
-        print ("Error: " +e.args[1])
+api_inst = get_api_instance()
+do_data_pull(api_inst)
 
-def search_path(path):
-    try:
-        connection = create_connection()
-        cursor = connection.cursor()
-
-        stmt = "SELECT tweet->%s from ClassTweet where JSON_CONTAINS_PATH(tweet, 'one', %s) = 1"
-        run_prepared_stmt(cursor, stmt, (path, path))
-
-        for row in cursor:
-            print (row[0])
-    except pymysql.Error as e:
-        print ("Error: " +e.args[0])
-
-if __name__ == "__main__":
-    api = twitter_connect()
-    # class_search_insert(api, 100)
-
-    search_keyword("ebola")
-    print ("===================")
-    search_path("$.entities.user_mentions[0].name")
-    #print "==================="
-    update_all_JS("$.add", "true")
