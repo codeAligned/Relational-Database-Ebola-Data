@@ -26,7 +26,7 @@ def get_api_instance():
   
 def do_data_pull(api_inst):
 
-  sql_query = "select country_name, health_exp, gdp_cap, urban_pop from Country order by country_name"
+  sql_query = "select country_name from CountryTweet order by country_name"
 
   try: 
     conn = create_connection()
@@ -36,9 +36,6 @@ def do_data_pull(api_inst):
 
     for record in resultset:
       country_name = record[0]
-      health_exp = record[1]
-      gdp_cap = record[2]
-      urban_pop = record[3]
 
       ebola_query = "(#Ebola) AND "
       twitter_query = ebola_query + "'" + country_name + "'"
