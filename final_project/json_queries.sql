@@ -13,15 +13,14 @@ order by retweet_count desc;
 select tweet_id, screen_name, followers_count from Tweet
 order by followers_count desc;
 
--- list tweets originating from Negal with urban_pop of tweeted country
-select tweet_id, origin, Tweet.country_name, urban_pop  from Tweet
+-- list tweets originating from Nepal with urban_pop of tweeted country
+select tweet_id, origin, Tweet.country_name, urban_pop from Tweet
 left outer join Country
 on Country.country_name=Tweet.country_name
 where origin = 'Nepal';
 
 -- list tweets on a country whose health_exp is < 6
-select tweet_id, Tweet.country_name, health_exp
-from Tweet
+select tweet_id, Tweet.country_name, health_exp from Tweet
 left outer join Country
 on Country.country_name=Tweet.country_name
 where health_exp < 6;
