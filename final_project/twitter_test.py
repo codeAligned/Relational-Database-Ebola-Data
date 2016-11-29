@@ -7,6 +7,7 @@ Created on Tue Nov 22 13:01:03 2016
 """
 import json
 import tweepy
+import pymysql
 from db_connect import *
 
 # Our real keys and tokens
@@ -21,8 +22,6 @@ def get_api_instance():
   api_inst = tweepy.API(auth)
   return api_inst
 
-  
-  
   
 def do_data_pull(api_inst):
 
@@ -39,20 +38,20 @@ def do_data_pull(api_inst):
 
       ebola_query = "(#Ebola) AND "
       twitter_query = ebola_query + "'" + country_name + "'"
-      print "twitter_query: " + twitter_query
+      print ("twitter_query: " + twitter_query)
       twitter_cursor = tweepy.Cursor(api_inst.search, q=twitter_query, lang="en")
 
       for page in twitter_cursor.pages():
         for item in page:
           json_str = json.dumps(item._json)
-          print "found a " + country_name + " tweet"
+          print ("found a " + country_name + " tweet")
           insert_stmt = "insert into Tweet(tweet_doc, country_name) values(%s, %s)"
           run_prepared_stmt(db_cursor, insert_stmt, (json_str, country_name))
           do_commit(conn)
 
   except pymysql.Error as error:
     is_success = False
-    print "do_data_pull: " + e.strerror
+    print ("do_data_pull: " + e.strerror)
 
 api_inst = get_api_instance()
 do_data_pull(api_inst)
