@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 22 13:01:03 2016
-
-@author: juliannecrea
-"""
 import json
 import tweepy
 import pymysql
@@ -55,4 +48,3 @@ def do_data_pull(api_inst):
 
 api_inst = get_api_instance()
 do_data_pull(api_inst)
-

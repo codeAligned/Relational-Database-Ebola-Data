@@ -1,9 +1,11 @@
+-- extend_database.sql for Ebola database
+-- creates Tweet table if exists
 
 use ebola;
 
-drop table if exists Tweet;
+DROP TABLE IF EXISTS Tweet;
 
-create table Tweet (
+CREATE TABLE Tweet (
   tweet_id varchar(32) generated always 
      as (json_unquote(json_extract(tweet_doc, '$.id_str'))) stored primary key,
   screen_name varchar(32) generated always 
