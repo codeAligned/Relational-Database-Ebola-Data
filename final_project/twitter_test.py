@@ -26,7 +26,7 @@ def get_api_instance():
   
 def do_data_pull(api_inst):
 
-  sql_query = "select country_name from CountryTweet order by country_name"
+  sql_query = "select country_name from Country order by country_name"
 
   try: 
     conn = create_connection()
