@@ -27,6 +27,9 @@ CREATE TABLE Tweet (
 
   origin varchar(100) generated always
      as (json_unquote(json_extract(tweet_doc, '$.place.country'))) stored,
+     
+  tweet_text varchar(400) generated always
+     as (json_unquote(json_extract(tweet_doc, '$.text'))) stored,
 
 
   tweet_doc json,

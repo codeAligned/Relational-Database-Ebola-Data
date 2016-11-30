@@ -86,7 +86,7 @@ def count_tweets_liberia():
     run_insert(stmt)
 
 def orderby_retweets():
-    stmt = "SELECT tweet_id, retweet_count from Tweet order by retweet_count desc;"
+    stmt = "SELECT tweet_id, screen_name, retweet_count from Tweet order by retweet_count desc;"
     run_insert(stmt)
 
 def orderby_followers():
@@ -99,6 +99,22 @@ def tweets_from_Nepal():
 
 def tweets_hpexp():
     stmt = "SELECT tweet_id, Tweet.country_name, health_exp from Tweet left outer join Country on Country.country_name=Tweet.country_name where health_exp<6;"
+    run_insert(stmt)
+
+def retweeted_tweets():
+    stmt = "SELECT tweet_text, retweet_count from Tweet where tweet_text like '%RT @%' order by retweet_count desc;"
+    run_insert(stmt)
+
+def liberia_tweets():
+    stmt = "SELECT screen_name, tweet_text from Tweet where tweet_text like '%liberia%';"
+    run_insert(stmt)
+
+def sierraleone_tweets():
+    stmt = "SELECT screen_name, tweet_text from Tweet where tweet_text like '%sierraleone%';"
+    run_insert(stmt)
+
+def guinea_tweets():
+    stmt = "SELECT screen_name, tweet_text from Tweet where tweet_text like '%guinea%';"
     run_insert(stmt)
 
 

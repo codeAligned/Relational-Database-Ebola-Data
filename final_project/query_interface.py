@@ -22,10 +22,14 @@ def print_menu():
     print ('15: List average education level of survey respondents, by gender.\n')
     print ('------------------- Queries on Tweets -------------------\n')
     print ('16: Count number of tweets on Liberia.')
-    print ('17: List tweet_id by decreasing number of retweets.')
+    print ('17: List tweet_id with screen_name by decreasing number of retweets.')
     print ('18: List tweet_id with screen_name by decreasing number of followers_count.')
     print ('19: List tweets originating from Nepal with urban_pop of tweeted country.')
-    print ('20: List tweets on a country whose health_exp is < 6.\n')
+    print ('20: List tweets on a country whose health_exp is < 6.')
+    print ('21: List content and retweet count of retweets, order by decreasing retweet count.')
+    print ('22: List tweets about Liberia with username.')
+    print ('23: List tweets about Sierra Leone with username.')
+    print ('24: List tweets about Guinea with username.\n')
 
 
 def run_another():
@@ -104,6 +108,18 @@ def run_query_case():
         run_another()
     elif (case == 20):
         tweets_hpexp()
+        run_another()
+    elif (case == 21):
+        retweeted_tweets()
+        run_another()
+    elif (case == 22):
+        liberia_tweets()
+        run_another()
+    elif (case == 23):
+        sierraleone_tweets()
+        run_another()
+    elif (case == 24):
+        guinea_tweets()
         run_another()
     else:
         print('This is not a valid option.')

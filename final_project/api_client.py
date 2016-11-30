@@ -37,7 +37,7 @@ def do_data_pull(api_inst):
       for page in twitter_cursor.pages():
         for item in page:
           json_str = json.dumps(item._json)
-          print ("found a " + country_name + " tweet")
+          print ("found a " + country_name + " + #Ebola tweet")
           insert_stmt = "insert into Tweet(tweet_doc, country_name) values(%s, %s)"
           run_prepared_stmt(db_cursor, insert_stmt, (json_str, country_name))
           do_commit(conn)
