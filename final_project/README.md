@@ -30,7 +30,7 @@ To update:
 
 To build database and run CLI:
     
-    run ./build in bin
+    run ./build.sh in bin
 
 
 License
