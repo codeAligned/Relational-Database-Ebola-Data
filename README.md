@@ -11,3 +11,4 @@
 ##### Lab 1: Entity Relationship Diagrams
 ##### Lab 2: Data Loads
 ##### Lab 3: Query Interface
+##### Final_Project: Final Database and CLI structure with all build dependencies
