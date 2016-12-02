@@ -2,7 +2,7 @@ Database on ETCs
 =================
 
 Database on Ebola Treatment Centers in West Africa and social mobilization efforts
-url: https://github.com/cs327e-fall2016/jcrewA
+url: https://github.com/cs327e-fall2016/jcrew
 authors: Justin Chao <justin_chao@utexas.edu>, Julianne Crea <juliannecrea@utexas.edu>
 license: Public Domain
 updated: 6 December, 2016
