@@ -32,19 +32,3 @@ def run_insert(insert_stmt):
         print ("insert error: ", error)
         is_success = False
     return is_success
-
-
-# run_prep_stmt is unused in this lab...
-# def run_prep_stmt (stmt, param):
-    # is_success = True
-    # try:
-        # conn = create_connection()
-        # cur = conn.cursor()
-        # cur.execute(stmt, param)
-        # conn.commit()
-        # destroy_connection(conn)
-
-    # except pymysql.Error as error:
-        # print ("insert error: ", error)
-        # is_success = False
-    # return is_success

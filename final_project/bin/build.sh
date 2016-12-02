@@ -1,6 +1,7 @@
 #!/bin/bash
 # Build Ebola Database and execute Command Line Interface
 
+# PROGRAM START
 echo "=============== Building Ebola Database from datasets ==============="
 echo
 
@@ -37,4 +38,13 @@ python2 ../src/query_interface/query_interface.py
 
 
 # Clean Up
-rm -r ../src/*.pyc
+echo
+echo "=============== Cleaning up compiled files..."
+echo
+find .. -name \*.pyc -type f -delete 
+
+
+# END PROGRAM
+echo
+echo "============================== END PROGRAM =============================="
+echo

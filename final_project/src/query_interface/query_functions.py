@@ -121,9 +121,9 @@ def guinea_tweets():
 # Functions to create views
 def create_view_SurveyResp_Country():
     stmt = 'CREATE VIEW SurveyResp_Country (gender, age, education, country_name) AS SELECT gender, age, education, country_name FROM Survey_Respondent;'
-    run_insert(stmt)
+    run_insert_view(stmt)
 
 def create_view_etc_limited():
     stmt = 'CREATE VIEW ETC_limited (etc_name, country_name, partner_org) AS SELECT etc_name, country_name, partner_org FROM ETC, Partner_Orgs;'
-    run_insert(stmt)
+    run_insert_view(stmt)
 

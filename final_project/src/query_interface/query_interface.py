@@ -1,4 +1,6 @@
 # CLI query interface for Ebola database in Python
+#!/bin/python2
+
 import pymysql
 from db_connect import *
 from query_functions import *
@@ -131,8 +133,8 @@ def main():
 
     # create views
     print ('...Creating views')
-    create_view_SurveyResp_Country()
     create_view_etc_limited()
+    create_view_SurveyResp_Country()
     
     # print query options menu
     print_menu()
@@ -140,5 +142,5 @@ def main():
     # prompt user for query option
     run_query_case()
 
-    print('\n============== END PROGRAM ==============')
+    print('\n============== CLOSING INTERFACE ==============')
 main()

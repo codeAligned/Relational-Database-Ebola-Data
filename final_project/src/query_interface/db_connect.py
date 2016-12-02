@@ -44,6 +44,30 @@ def run_prepared_stmt(cursor, stmt, paramtrs):
 def destroy_connection(conn):
     conn.close()
 
+def run_insert_view(insert_view):
+    is_success = True
+    # run_protect against SQL injections
+    if (run_protect(insert_view) is False):
+        print("Suspicious activity detected. Action not permitted.")
+        is_success = False
+        return is_success
+
+    try:
+        conn = create_connection()
+        cur = conn.cursor()
+        cur.execute(insert_view)
+        results = cur.fetchall()
+
+        conn.commit()
+        destroy_connection(conn)
+
+    # error checking
+    except pymysql.Error as error:
+        print ("insert error: ", error) 
+        is_success = False
+    return is_success
+
+
 def run_insert(insert_stmt):
     is_success = True
     # run_protect against SQL injections

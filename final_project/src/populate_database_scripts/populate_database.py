@@ -1,3 +1,5 @@
+#!/bin/python2
+
 import pymysql
 from import_Country import *
 from import_Country_Org import *
