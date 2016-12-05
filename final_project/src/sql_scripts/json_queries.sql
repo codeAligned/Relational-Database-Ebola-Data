@@ -24,3 +24,20 @@ select tweet_id, Tweet.country_name, health_exp from Tweet
 left outer join Country
 on Country.country_name=Tweet.country_name
 where health_exp < 6;
+
+-- list content and retweet count of retweets, order by decreasing retweet count
+select tweet_text, retweet_count from Tweet
+where tweet_text like '%RT @%' 
+order by retweet_count desc;
+
+-- list tweets about Liberia with screen_name
+select screen_name, tweet_text from Tweet
+where tweet_text like '%liberia%';
+
+-- list tweets about Sierra Leone with screen_name
+select screen_name, tweet_text from Tweet
+where tweet_text like '%sierraleone%';
+
+-- list tweets about Guinea with screen_name
+select screen_name, tweet_text from Tweet
+where tweet_text like '%guinea%';

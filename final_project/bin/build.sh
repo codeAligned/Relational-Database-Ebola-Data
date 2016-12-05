@@ -34,7 +34,7 @@ python2 ../src/query_interface/api_client.py
 echo
 echo "=============== Starting Command Line Interface..."
 echo
-python2 ../src/query_interface/query_interface.py
+python2 ../src/query_interface/extended_query_interface.py
 
 
 # Clean Up
