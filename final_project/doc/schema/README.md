@@ -9,7 +9,3 @@ logical_model.pdf
 data_dictionary.xlsx   
     * listing of variable names used in schemas, with type, description, and
       source.  
-
-rev_eng_EER.pdf  
-    * model created from MySQL Workbench and Reverse Engineered from
-      create_tables.sql.  

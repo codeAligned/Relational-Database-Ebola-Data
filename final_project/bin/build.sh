@@ -8,7 +8,7 @@ echo
 # Create tables for database
 echo "=============== Creating tables..."
 echo
-mysql -u "root" < ../src/sql_scripts/create_tables.sql
+mysql -u "root" -p "" < ../src/sql_scripts/create_tables.sql
 
 # Extend database with Tweet table 
 echo
