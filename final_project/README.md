@@ -17,6 +17,9 @@ Features:
 * Command Line Interface of selected queries on datasets.
 * Queries on Twitter tweets pertaining to Ebola on Sierra Leone, Liberia, and Guinea.
 
+A comprehensive report of this project is available in the doc directory as
+report.pdf.
+
 Build
 =====
 
